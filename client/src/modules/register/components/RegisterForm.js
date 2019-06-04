@@ -9,8 +9,13 @@ class RegisterForm extends Component {
     console.log('注册')
   }
 
-  handleSubmit = () => {
+  handleSubmit = (e) => {
     console.log('submit')
+    e.preventDefault()
+    this.props.form.validateFieldsAndScroll((err, values) => {
+      if (err) console.log(err)
+      console.log(values)
+    })
   }
 
   readmeMd = () => {
@@ -20,32 +25,35 @@ class RegisterForm extends Component {
   render() {
 
     const formItemLayout = {
-      labeCol: {
+      labelCol: {
         xs: { span: 24 },
-        sm: { span: 8 }
+        sm: { span: 4 },
       },
       wrapperCol: {
         xs: { span: 24 },
-        ms: { span: 16 }
+        sm: { span: 16 },
       }
     }
 
-    const titleFormItemLayout = {
-      warpperCol: {
+    const tailFormItemLayout = {
+      wrapperCol: {
         xs: {
           span: 24,
-          offset: 0
+          offset: 0,
         },
         sm: {
-          span: 16,
-          offset: 8
-        }
-      }
-    }
+          span: 20,
+          offset: 4,
+        },
+      },
+    };
 
     const { getFieldDecorator } = this.props.form
     return(
       <div className='rg_form_wrap'>
+        <div className='rg_form_title_wrap'>
+          <h3 className='rg_from_title_h3'>用户注册</h3>
+        </div>
         <Form {...formItemLayout} onClick={this.handleSubmit}>
           <Form.Item label='用户名'>
             {getFieldDecorator('username', {
@@ -57,7 +65,7 @@ class RegisterForm extends Component {
               />
             )}
           </Form.Item>
-          <Form.Item label='password' hasFeedback>
+          <Form.Item label='密码' hasFeedback>
             {getFieldDecorator('password', {
               rules: [{requried: true}]
             })(
@@ -67,7 +75,7 @@ class RegisterForm extends Component {
               />
             )}
           </Form.Item>
-          <Form.Item label='password' hasFeedback>
+          <Form.Item label='确认密码' hasFeedback>
             {getFieldDecorator('password', {
               rules: [{requried: true}]
             })(
@@ -78,7 +86,7 @@ class RegisterForm extends Component {
               />
             )}
           </Form.Item>
-          <Form.Item>
+          <Form.Item label='邮箱'>
             {getFieldDecorator('email', {
               rules: [{requried: true}]
             })(
@@ -88,15 +96,15 @@ class RegisterForm extends Component {
               />
             )}
           </Form.Item>
-          <Form.Item>
+          <Form.Item label='用户权限'>
             {getFieldDecorator('use', {
               initialValue: true
             })(
               <Checkbox>权限阅读</Checkbox>
             )}
-            <a onClick={this.handleSubmit.readmeMd}>点击查看更多</a>
+            <a className='rg_resh_text' onClick={this.readmeMd}>点击查看更多</a>
           </Form.Item>
-          <Form.Item>
+          <Form.Item {...tailFormItemLayout}>
             <Button type='default' htmlType='submit'>注册</Button>
           </Form.Item>
         </Form>
