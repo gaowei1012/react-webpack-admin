@@ -1,10 +1,11 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
+import RegisterForm from './components/RegisterForm'
 
 export default class Register extends PureComponent {
   render() {
     return (
-      <div>这个是注册页面</div>
+      <div><RegisterForm /></div>
     )
   }
 }

@@ -1,8 +1,10 @@
 import React, { PureComponent } from 'react'
+import LoginForm from './components/LoginForm'
+import './index.less'
 
 class Login extends PureComponent {
   render() {
-    return (<div>this is login page</div>)
+    return (<div className='lg_wrap'><LoginForm /></div>)
   }
 }
 
