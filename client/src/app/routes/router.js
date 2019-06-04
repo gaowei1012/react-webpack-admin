@@ -1,18 +1,16 @@
 import React from 'react'
 import {
-  Switch,
   BrowserRouter as Router,
   Route
 } from 'react-router-dom'
+import AppContainer from './../containers/AppContainer'
 
 class MyRouter extends React.PureComponent {
   render() {
     return (
-      <div>
-        <Switch>
-          <Route path='/' component='' />
-        </Switch>
-      </div>
+      <Router>
+        <Route path='/' component={AppContainer} exact />
+      </Router>
     )
   }
 }
