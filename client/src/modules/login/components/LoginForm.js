@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Form, Input, Icon, Checkbox, Button } from 'antd';
+import { Link } from 'react-router-dom'
 import './index.less'
 
 class LoginForm extends Component {
@@ -8,13 +9,25 @@ class LoginForm extends Component {
 
   }
 
+  handlerReficet = () => {
+    
+  }
+
+  handleSubmit = e => {
+    e.preventDefault();
+    this.props.form.validateFieldsAndScroll((err, values) => {
+      if (err) { console.log(`err ${err}`) }
+      console.log(values)
+    })
+  }
+
   render() {
 
     const { getFieldDecorator } = this.props.form
 
     return (
       <div className='lg_form'>
-        <Form>
+        <Form onClick={this.handleSubmit}>
           <Form.Item>
             {
               getFieldDecorator('username', {
@@ -50,10 +63,12 @@ class LoginForm extends Component {
                 <Checkbox>选我</Checkbox>
               )
             }
-            <a className='lg_form_link' onClick={this.handlerReficet}>没有账号?请注册</a>
+            <Link to='/register'>
+              <a className='lg_form_link' onClick={this.handlerReficet}>没有账号?请注册</a>
+            </Link>
           </Form.Item>
           <Form.Item>
-            <Button type='primary' className='lg_form_bt'>注册</Button>
+            <Button type='primary' className='lg_form_bt' htmlType='submit'>注册</Button>
           </Form.Item>
         </Form>
       </div>
