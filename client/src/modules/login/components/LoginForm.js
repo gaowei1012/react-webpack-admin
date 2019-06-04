@@ -9,10 +9,6 @@ class LoginForm extends Component {
 
   }
 
-  handlerReficet = () => {
-    
-  }
-
   handleSubmit = e => {
     e.preventDefault();
     this.props.form.validateFieldsAndScroll((err, values) => {
@@ -64,7 +60,7 @@ class LoginForm extends Component {
               )
             }
             <Link to='/register'>
-              <a className='lg_form_link' onClick={this.handlerReficet}>没有账号?请注册</a>
+              <a className='lg_form_link'>没有账号?请注册</a>
             </Link>
           </Form.Item>
           <Form.Item>
