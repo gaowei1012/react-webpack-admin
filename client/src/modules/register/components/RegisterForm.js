@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Form, Input, Icon, Button, Checkbox} from 'antd'
+import { Link } from 'react-router-dom'
 import './index.less'
 
 
@@ -16,10 +17,6 @@ class RegisterForm extends Component {
       if (err) console.log(err)
       console.log(values)
     })
-  }
-
-  readmeMd = () => {
-    console.log('权限阅读')
   }
 
   render() {
@@ -102,7 +99,9 @@ class RegisterForm extends Component {
             })(
               <Checkbox>权限阅读</Checkbox>
             )}
-            <a className='rg_resh_text' onClick={this.readmeMd}>点击查看更多</a>
+            <Link to='/login'>
+              <a className='rg_resh_text'>已有账号?请登录</a>
+            </Link>
           </Form.Item>
           <Form.Item {...tailFormItemLayout}>
             <Button type='default' htmlType='submit'>注册</Button>
