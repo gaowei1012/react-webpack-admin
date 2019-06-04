@@ -35,7 +35,7 @@ class LoginForm extends Component {
               })(
                 <Input
                   prefix={<Icon type='lock' style={{ color: 'rgba(0,0,0,.25)' }} />}
-                  type='text'
+                  type='password'
                   placeholder='请输入用密码'
                 />
               )
