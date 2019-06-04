@@ -32,3 +32,9 @@ https://github.com/gmw-zjw/my_webpack/tree/master/05webpack-react
 
 ## 集成antd作为最为项目的UI库，方便布局
 使用antd作为该项目的UI库
+
+## 集成服务端渲染为一体化
+ -- server
+ -- clinet
+
+ // -- //
