@@ -1,13 +1,12 @@
-import React, { Component } from 'react'
+import React from 'react'
+import AppContainer from './containers/AppContainer'
 
-export default class App extends Component {
-  componentDidMount() {
-    console.log(`客户端组件开始渲染`)
-  }
-
-  render() {
-    return (
-      <div>this is app page</div>
-    )
-  }
+const App = () => {
+  return (
+    <div>
+      <AppContainer />
+    </div>
+  )
 }
+
+export default App
