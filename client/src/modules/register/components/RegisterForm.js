@@ -100,7 +100,7 @@ class RegisterForm extends Component {
               <Checkbox>权限阅读</Checkbox>
             )}
             <Link to='/login'>
-              <a className='rg_resh_text'>已有账号?请登录</a>
+              <span className='rg_resh_text'>已有账号?请登录</span>
             </Link>
           </Form.Item>
           <Form.Item {...tailFormItemLayout}>

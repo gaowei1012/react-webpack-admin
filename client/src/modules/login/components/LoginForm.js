@@ -24,7 +24,7 @@ class LoginForm extends Component {
     return (
       <div className='lg_form'>
         <Form onClick={this.handleSubmit}>
-          <Form.Item>
+          <Form.Item hasFeedback>
             {
               getFieldDecorator('username', {
                 rules: [{ required: true }]
@@ -37,7 +37,7 @@ class LoginForm extends Component {
               )
             }
           </Form.Item>
-          <Form.Item>
+          <Form.Item hasFeedback>
             {
               getFieldDecorator('password', {
                 rules: [{ required: true }]
@@ -60,7 +60,7 @@ class LoginForm extends Component {
               )
             }
             <Link to='/register'>
-              <a className='lg_form_link'>没有账号?请注册</a>
+              <span className='lg_form_link'>没有账号?请注册</span>
             </Link>
           </Form.Item>
           <Form.Item>
