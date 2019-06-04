@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Form, Input, Icon, Button } from 'antd'
+import { Form, Input, Icon, Button, Checkbox} from 'antd'
 import './index.less'
 
 
@@ -13,12 +13,41 @@ class RegisterForm extends Component {
     console.log('submit')
   }
 
+  readmeMd = () => {
+    console.log('权限阅读')
+  }
+
   render() {
+
+    const formItemLayout = {
+      labeCol: {
+        xs: { span: 24 },
+        sm: { span: 8 }
+      },
+      wrapperCol: {
+        xs: { span: 24 },
+        ms: { span: 16 }
+      }
+    }
+
+    const titleFormItemLayout = {
+      warpperCol: {
+        xs: {
+          span: 24,
+          offset: 0
+        },
+        sm: {
+          span: 16,
+          offset: 8
+        }
+      }
+    }
+
     const { getFieldDecorator } = this.props.form
     return(
       <div className='rg_form_wrap'>
-        <Form>
-          <Form.Item>
+        <Form {...formItemLayout} onClick={this.handleSubmit}>
+          <Form.Item label='用户名'>
             {getFieldDecorator('username', {
               rules: [{requried: true}]
             })(
@@ -28,13 +57,24 @@ class RegisterForm extends Component {
               />
             )}
           </Form.Item>
-          <Form.Item>
+          <Form.Item label='password' hasFeedback>
             {getFieldDecorator('password', {
               rules: [{requried: true}]
             })(
               <Input type='password' 
                 prefix={<Icon type='lock' style={{color: 'rgba(0, 0, 0, .25)'}} />} 
                 placeholder='请输入密码'
+              />
+            )}
+          </Form.Item>
+          <Form.Item label='password' hasFeedback>
+            {getFieldDecorator('password', {
+              rules: [{requried: true}]
+            })(
+              <Input
+                type='password'
+                prefix={<Icon type='lock' style={{color: 'rgba(0, 0, 0, .25)'}} />}
+                placeholder='请再次输入密码'
               />
             )}
           </Form.Item>
@@ -49,7 +89,15 @@ class RegisterForm extends Component {
             )}
           </Form.Item>
           <Form.Item>
-            <Button type='default' onClick={this.handleSubmit}></Button>
+            {getFieldDecorator('use', {
+              initialValue: true
+            })(
+              <Checkbox>权限阅读</Checkbox>
+            )}
+            <a onClick={this.handleSubmit.readmeMd}>点击查看更多</a>
+          </Form.Item>
+          <Form.Item>
+            <Button type='default' htmlType='submit'>注册</Button>
           </Form.Item>
         </Form>
       </div>
