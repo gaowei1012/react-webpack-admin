@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import { Form, Input, Icon, Checkbox, Button } from 'antd';
+import { Form, Input, Icon, Checkbox, Button, message } from 'antd';
 import { Link } from 'react-router-dom'
+import {postRequest} from '../../../server/request'
 import './index.less'
 
 class LoginForm extends Component {
@@ -10,14 +11,19 @@ class LoginForm extends Component {
     isHasFeedback: false
   }
 
-  componentDidMount() {
-    // 登录接口处理
-  }
-
-  handleSubmit = e => {
+  handleSubmit = (e, value) => {
+    if (!value) {
+      message.info('请输入用户名密码')
+    }
     e.preventDefault();
     let data = this.props.form.getFieldsValue()
-    console.log(data)
+    // 登录
+    postRequest('user/login', data).then(res => {
+      if (res.code == 1 && res.success == true) {
+        // 跳转到首页
+        
+      }
+    })
   }
 
   // 用户名校验
@@ -73,10 +79,7 @@ class LoginForm extends Component {
             )}
           </Form.Item>
           <Form.Item>
-            {getFieldDecorator('remember', {
-              valuePropName: 'checked',
-              initialValue: true,
-            })(<Checkbox>选我</Checkbox>)}
+            <Checkbox>选我</Checkbox>
             <Link to='/register' className='lg_form_link'>
               <span>没有账号？请注册</span>
             </Link>

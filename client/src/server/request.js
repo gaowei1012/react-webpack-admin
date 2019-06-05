@@ -29,13 +29,31 @@ axios.interceptors.request.use(data => {
 
 let base = 'http://localhost:7777/'
 
-export const potRequest = (url, parmas) =>  {
-  axios({
-    method: "POST",
-    url: `${base}${url}`,
-    data: parmas,
-    headers: {
-      'Content-Type': 'application/x-www-form-urlencode'
-    }
+// export const potRequest = (url, parmas) =>  {
+//   axios({
+//     method: "POST",
+//     url: `${base}${url}`,
+//     data: parmas,
+//     headers: {
+//       'Content-Type': 'application/x-www-form-urlencode'
+//     }
+//   })
+// }
+
+
+export const postRequest = (url, parmas) => {
+  return new Promise((resolve, reject) => {
+    axios({
+      method: 'POST',
+      url: `${base}${url}`,
+      data: parmas,
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      }
+    }).then((res) => {
+      resolve(res.data)
+    }).catch(err => {
+      reject(err)
+    })
   })
 }
