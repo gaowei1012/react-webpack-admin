@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev-cli": "webpack-dev-server --hot --inline --progress --colors --config config/webpack.dev.conf.js",
+    "dev-cli": "webpack-dev-server --hot --inline --progress --colors --config build/webpack.dev.conf.js",
     "start": "npm run dev",
-    "build": "webpack --progress --colors --config config/webpack.prod.conf.js",
+    "build": "webpack --progress --colors --config build/webpack.prod.conf.js",
     "lint": "eslint --ext .js --ext .jsx src/",
     "lint-fix": "eslint --ext .js --ext .jsx src/",
-    "dev": "npm run dev-cli && npm run lint-fix"
+    "dev": "npm run dev-cli"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +19,7 @@
     "babel-eslint": "^10.0.1",
     "babel-loader": "7.1.5",
     "babel-plugin-import": "^1.11.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.5",
     "babel-preset-latest": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",

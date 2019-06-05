@@ -59,11 +59,11 @@ class BaseLayout extends Component {
           </Sider>
           <Layout>
             <Header style={{ backgroundColor: '#fff', padding: '0' }}>
-              <Icon
-                className='toggler'
-                type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
-                onClick={this.toggle}
-              />
+            <Icon
+              className="trigger"
+              type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
+              onClick={this.toggle}
+            />
             </Header>
             <Content
               style={{
