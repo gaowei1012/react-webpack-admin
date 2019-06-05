@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Layout, Menu, Icon } from 'antd'
 import history from '../../app/utils/history'
+import { sildeData, groupKey } from '../../app/routes/provideRouter'
 import './index.less'
 
 const { Header, Sider, Content } = Layout;
