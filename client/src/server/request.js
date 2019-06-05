@@ -1,6 +1,8 @@
 import axios from 'axios'
 import { message } from 'antd'
+
 // 封装一个请求方法，用户获取请求后端数据
+// 拦截处理
 
 axios.interceptors.request.use(config => {
   return config
