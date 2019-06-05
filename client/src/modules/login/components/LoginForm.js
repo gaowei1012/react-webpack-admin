@@ -5,16 +5,43 @@ import './index.less'
 
 class LoginForm extends Component {
 
+  // init state
+  state = {
+    isHasFeedback: false
+  }
+
   componentDidMount() {
     // 登录接口处理
   }
 
   handleSubmit = e => {
     e.preventDefault();
-    this.props.form.validateFieldsAndScroll((err, values) => {
-      if (err) { console.log(`err ${err}`) }
-      console.log(values)
-    })
+    let data = this.props.form.getFieldsValue()
+    console.log(data)
+  }
+
+  // 用户名校验
+  checkUserName = (rule, value, callback) => {
+    let rge = /[A-Za-z0-9_\-\u4e00-\u9fa5]+/
+    if (!value) {
+      callback('用户名不能为空')
+    } else if (!rge.test(value)) {
+      callback('用户名必须是字符或数字')
+    } else {
+      callback()
+    }
+  }
+
+  // 密码校验
+  checkPassword = (rule, value, callback) => {
+    let rge = /^[a-z0-9_-]{6,18}$/
+    if (!value) {
+      callback('密码不能为空')
+    } else if (!rge.test(value)) {
+      callback('用户名密码必须是数组或字母')
+    } else {
+      callback()
+    }
   }
 
   render() {
@@ -23,48 +50,39 @@ class LoginForm extends Component {
 
     return (
       <div className='lg_form'>
-        <Form onClick={this.handleSubmit}>
-          <Form.Item hasFeedback>
-            {
-              getFieldDecorator('username', {
-                rules: [{ required: true }]
-              })(
-                <Input
-                  prefix={<Icon type='user' style={{ color: 'rgba(0,0,0,.25)' }} />}
-                  type='text'
-                  placeholder='请输入用户名'
-                />
-              )
-            }
-          </Form.Item>
-          <Form.Item hasFeedback>
-            {
-              getFieldDecorator('password', {
-                rules: [{ required: true }]
-              })(
-                <Input
-                  prefix={<Icon type='lock' style={{ color: 'rgba(0,0,0,.25)' }} />}
-                  type='password'
-                  placeholder='请输入用密码'
-                />
-              )
-            }
+        <Form onSubmit={this.handleSubmit} className="lg_form">
+          <Form.Item>
+            {getFieldDecorator('username', {
+              rules: [{ validator: this.checkUserName }],
+            })(
+              <Input
+                prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
+                placeholder="用户名"
+              />,
+            )}
           </Form.Item>
           <Form.Item>
-            {
-              getFieldDecorator('remember', {
-                initialValue :true,
-                valuePropsName: 'checked'
-              })(
-                <Checkbox>选我</Checkbox>
-              )
-            }
-            <Link to='/register'>
-              <span className='lg_form_link'>没有账号?请注册</span>
+            {getFieldDecorator('password', {
+              rules: [{ validator: this.checkPassword }],
+            })(
+              <Input
+                prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
+                type="password"
+                placeholder="密码"
+              />,
+            )}
+          </Form.Item>
+          <Form.Item>
+            {getFieldDecorator('remember', {
+              valuePropName: 'checked',
+              initialValue: true,
+            })(<Checkbox>选我</Checkbox>)}
+            <Link to='/register' className='lg_form_link'>
+              <span>没有账号？请注册</span>
             </Link>
           </Form.Item>
           <Form.Item>
-            <Button type='primary' className='lg_form_bt' htmlType='submit'>注册</Button>
+            <Button type='primary' htmlType='submit' className='lg_form_bt'>登录</Button>
           </Form.Item>
         </Form>
       </div>
