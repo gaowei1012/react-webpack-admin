@@ -6,7 +6,7 @@ import './index.less'
 class LoginForm extends Component {
 
   componentDidMount() {
-
+    // 登录接口处理
   }
 
   handleSubmit = e => {
