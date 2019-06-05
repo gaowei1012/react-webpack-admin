@@ -1,8 +1,5 @@
 import React, { Component } from 'react'
 import { Layout, Menu, Icon } from 'antd'
-import NavTop from '../navTop'
-import NavLeft from '../navLeft'
-import Context from '../context'
 import './index.less'
 
 const { Header, Sider, Content } = Layout;
