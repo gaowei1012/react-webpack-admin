@@ -6,7 +6,7 @@ import './index.less'
 export default class Register extends PureComponent {
   render() {
     return (
-      <div class='rg_wrap'><RegisterForm  /></div>
+      <div className='rg_wrap'><RegisterForm  /></div>
     )
   }
 }
