@@ -1,0 +1,13 @@
+.ly_base_wrap {
+  height: 100%;
+}
+.ly_base_wrap .ant-layout.ant-layout-has-sider {
+  height: 100%;
+}
+.ly_base_wrap .ly_logo {
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  padding: 4px;
+  color: #ffffff;
+}
