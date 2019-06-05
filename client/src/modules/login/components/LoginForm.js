@@ -11,20 +11,34 @@ class LoginForm extends Component {
     isHasFeedback: false
   }
 
-  handleSubmit = (e, value) => {
-    if (!value) {
-      message.info('请输入用户名密码')
-    }
+  handleSubmit = e => {
     e.preventDefault();
-    let data = this.props.form.getFieldsValue()
-    // 登录
-    postRequest('user/login', data).then(res => {
-      if (res.code == 1 && res.success == true) {
-        // 跳转到首页
-        
+    this.props.form.validateFields((err, value) => {
+      console.log(value)
+      if (err) {
+        message.error('error')
+        throw new Error(err)
       }
+      postRequest('user/login', value).then(res => {
+        console.log(res)
+      }) 
     })
   }
+
+  // handleSubmit = (e, value) => {
+  //   if (!value) {
+  //     message.info('请输入用户名密码')
+  //   }
+  //   e.preventDefault();
+  //   let data = this.props.form.getFieldsValue()
+  //   // 登录
+  //   postRequest('user/login', data).then(res => {
+  //     if (res.code == 1 && res.success == true) {
+  //       // 跳转到首页
+        
+  //     }
+  //   })
+  // }
 
   // 用户名校验
   checkUserName = (rule, value, callback) => {
@@ -93,6 +107,6 @@ class LoginForm extends Component {
   }
 }
 
-const NewForm = Form.create()(LoginForm)
+const NewForm = Form.create({})(LoginForm)
 
 export default NewForm
