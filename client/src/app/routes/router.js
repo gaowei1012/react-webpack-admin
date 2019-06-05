@@ -21,7 +21,6 @@ class MyRouter extends React.PureComponent {
       <Router>
         <Switch>
             <Route path='/base' component={BaseLayOut} exact />
-            <Route path='/' component={AppContainer} />
             <Route path='/login' component={Login} />
             <Route path='/register' component={Register} />
             <Route component={NotFound} />
