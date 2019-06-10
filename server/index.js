@@ -13,8 +13,8 @@ router.use('/user', user.routes())
 
 // 数据库连接操作
 ;(async () => {
-  await connect()
-  // initShema()
+  await connect(),
+  initShema()
 })()
 
 app.use(cors())
