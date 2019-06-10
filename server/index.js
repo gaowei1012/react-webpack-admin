@@ -1,5 +1,6 @@
 const Koa = require('koa')
 const Router = require('koa-router')
+const cors = require('koa2-cors')
 const bodyParser = require('koa-bodyparser')
 const { initShema, connect } = require('./db/init')
 
@@ -16,6 +17,7 @@ router.use('/user', user.routes())
   // initShema()
 })()
 
+app.use(cors())
 app.use(bodyParser())
 app.use(router.routes())
 app.use(router.allowedMethods())
