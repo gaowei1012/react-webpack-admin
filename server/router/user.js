@@ -26,7 +26,7 @@ router.post('/register', async (ctx, next) => {
   .then((err) => {
     ctx.body = {
       code: 1,
-      message: '注册失败'
+      message: `注册失败 => ${err}`
     }
   })
 
