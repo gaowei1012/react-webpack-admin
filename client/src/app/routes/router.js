@@ -3,8 +3,8 @@ import {
   BrowserRouter as Router,
   Route,
   Switch,
-  HashRouter
 } from 'react-router-dom'
+import history from './../../history'
 //import AppContainer from './../containers/AppContainer'
 
 // components
@@ -27,7 +27,7 @@ class MyRouter extends React.PureComponent {
   render() {
     return (
       //<Provider store={store}>
-        <Router history={HashRouter}>
+        <Router history={history}>
           <Switch>
             <Route path='/base' component={BaseLayOut} exact />
             <Route path='/login' component={Login} />
