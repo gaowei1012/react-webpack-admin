@@ -7,8 +7,8 @@
     "dev-cli": "webpack-dev-server --hot --inline --progress --colors --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "build": "webpack --progress --colors --config build/webpack.prod.conf.js",
-    "lint": "eslint --ext .js --ext .jsx src/",
-    "lint-fix": "eslint --ext .js --ext .jsx src/",
+    "lint": "eslint --ext .js --ext .jsx client/src/",
+    "lint-fix": "eslint --ext .js --ext .jsx client/src/",
     "dev": "npm run dev-cli"
   },
   "keywords": [],

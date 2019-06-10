@@ -66,3 +66,4 @@ class RouterStateModel {
 const RouteState = new RouterStateModel()
 
 export default RouteState
+
