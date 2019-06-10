@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { Form, Input, Icon, Checkbox, Button, message } from 'antd';
 import { Link } from 'react-router-dom'
-import {postRequest} from '../../../server/request'
-import './index.less'
+import { postRequest } from '../../../api/request'
+import '../index.less'
 
 class LoginForm extends Component {
 

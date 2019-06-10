@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Form, Input, Icon, Button, Checkbox } from 'antd'
 import { Link } from 'react-router-dom'
-import './index.less'
+import '../index.less'
 
 
 class RegisterForm extends Component {

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Layout, Menu, Icon } from 'antd'
-import history from '../../app/utils/history'
-import { sildeData, groupKey } from '../../app/routes/provideRouter'
+//import history from '../../app/utils/history'
+//import { sildeData, groupKey } from '../../app/routes/provideRouter'
 import './index.less'
 
 const { Header, Sider, Content } = Layout;
@@ -12,10 +12,10 @@ class BaseLayout extends Component {
     super(props)
     this.collapsed = false;
     this.newTabIndex = 0;
-    const panes = [];
-    const menuPanes = [
-      { title: 'title', }
-    ]
+    //const panes = [];
+    //const menuPanes = [
+    //  { title: 'title', }
+    //]
 
 
   }
