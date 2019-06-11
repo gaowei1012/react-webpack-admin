@@ -1,26 +1,26 @@
 // 侧边栏联动菜单
 import React, { useState } from 'react';
 import { Menu, Icon } from 'antd';
-import { Link } from 'react-router-dom;';
+import { NavLink } from 'react-router-dom';
 import { DragDropContext, Draggable, Droppable } from 'react-beautiful-dnd';
 
 // left menus
 const renderMenuItem = item => (
   <Menu.Item key={item.key}>
-    <Link to={(item.route || item.key) + (item.query || '')}>
+    <NavLink to={(item.route || item.key) + (item.query || '')}>
       {item.icon && <Icon type={item.icon} />}
       <span className="nav-text">{item.title}</span>
-    </Link>
+    </NavLink>
   </Menu.Item>
 );
 
 // right context
 const renderSubsMenus = item => (
   <Menu.SubMenu key={item.key}>
-    <Link to={(item.route || item.key) + (item.query || '')}>
+    <NavLink to={(item.route || item.key) + (item.query || '')}>
       {item.icon && <Icon type={item.icon} />}
       <span className="nav-text"></span>
-    </Link>
+    </NavLink>
   </Menu.SubMenu>
 );
 

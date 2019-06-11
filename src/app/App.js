@@ -3,6 +3,8 @@ import MyRouter from './routes/routes';
 import DocumentTitle from 'react-document-title';
 import { Layout, notification, Icon } from 'antd';
 import { connectAlita } from 'redux-alita';
+import SiderCustom from './components';
+import HeaderCustom from './components';
 
 const { Content, Footer } = Layout;
 
