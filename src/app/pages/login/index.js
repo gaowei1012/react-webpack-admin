@@ -1,14 +1,14 @@
-import React from 'react'
-import LoginForm from './components/Login'
+import React from 'react';
+import LoginForm from './components/Login';
 
-import './index.less'
+import './index.less';
 
 const Login = () => {
   return (
-    <div className='lg_wrap'>
+    <div className="lg_wrap">
       <LoginForm />
     </div>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;
