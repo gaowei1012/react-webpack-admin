@@ -22,6 +22,6 @@ app.use(bodyParser())
 app.use(router.routes())
 app.use(router.allowedMethods())
 
-app.listen(7777, () => {
+app.listen(3030, () => {
   console.log('server started at port 3030')
 })
