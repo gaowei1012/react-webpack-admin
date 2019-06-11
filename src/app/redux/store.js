@@ -1,11 +1,11 @@
-// redux store
-import { createStore, combineReducers } from 'redux';
-import loginReducer from './reducers/loginReducer';
+// // redux store
+// import { createStore, combineReducers } from 'redux';
+// import loginReducer from './reducers/loginReducer';
 
-const reducers = combineReducers({
-  loginReducer: loginReducer
-});
+// const reducers = combineReducers({
+//   loginReducer: loginReducer
+// });
 
-const store = createStore(reducers);
+// const store = createStore(reducers);
 
-export default store;
+// export default store;

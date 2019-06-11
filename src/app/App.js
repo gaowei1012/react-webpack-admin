@@ -1,35 +1,45 @@
 import React from 'react';
-import { Provider } from 'react-redux';
 import MyRouter from './routes/routes';
 import DocumentTitle from 'react-document-title';
 import { Layout, notification, Icon } from 'antd';
-import store from './redux/store';
+import { connectAlita } from 'redux-alita';
 
 const { Content, Footer } = Layout;
 
 class App extends React.PureComponent {
+  state = {
+    collapsed: false,
+    title: ''
+  };
 
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      title: ''
-    }
+  toggle = () => {
+    this.setState({
+      collapsed: !this.state.collapsed
+    })
   }
 
   render() {
-
     const { title } = this.state;
-    const {} = this.props;
-
+    const { auth = { data: {} }, responsive = { data: {} } } = this.props;
+    console.log(auth)
     return (
       <DocumentTitle title={title}>
-          <Layout>
-            <MyRouter />
+        <Layout>
+          {!responsive.data.isMobile && <SiderCustom collapsed={this.state.collapsed} />}
+          {/* <ThemePicker /> */}
+          <Layout style={{ flexDirection: 'column' }}>
+            <HeaderCustom toggle={this.toggle} collapsed={this.state.collapsed} user={auth.data || {}} />
+            <Content style={{ margin: '0 16px', overflow: 'initial', flex: '1 1 0' }}>
+              <MyRouter auth={auth} />
+            </Content>
+            <Footer style={{ textAlign: 'center' }}>
+              React-Admin ©{new Date().getFullYear()} Created by 865470087@qq.com
+            </Footer>
           </Layout>
+        </Layout>
       </DocumentTitle>
-    )
+    );
   }
 }
 
-export default App;
+export default connectAlita(['auth', 'responsive'])(App);
