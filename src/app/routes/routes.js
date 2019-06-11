@@ -7,6 +7,7 @@ import BaseLayout from '../layout/BaseLayout';
 import Login from '../pages/login/index';
 import Register from '../pages/register/index';
 import NotFound from '../pages/notFound/index';
+import AuthorizedRouter from '../routes/AuthorizedRoute';
 
 class MyRouter extends React.PureComponent {
   render() {
