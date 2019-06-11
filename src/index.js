@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import MyRouter from './app/routes/routes'
+import App from './app/App';
 // antd
 import './styles/antd.css'
 
-ReactDOM.render(<MyRouter />, document.querySelector('#root'))
+ReactDOM.render(<App />, document.querySelector('#root'))
