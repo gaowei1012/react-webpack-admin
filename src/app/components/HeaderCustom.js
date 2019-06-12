@@ -1,7 +1,11 @@
 import React from 'react';
 
-const HeaderCustom = () => (
-  <div>hello</div>
-)
+class HeaderCustom extends React.Component {
+  render() {
+    return (
+      <div>hello</div>
+    )
+  }
+}
 
 export default HeaderCustom;
