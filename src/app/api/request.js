@@ -35,6 +35,21 @@ axios.interceptors.request.use(
 
 let base = 'http://localhost:7777/';
 
+/**
+ * 
+ * @param {String} url 请求路径
+ * @param {Object} parmas?<可选> 请求参数 
+ */
+export const requestHome = (url, parmas = {}) => {
+  axios({
+    url: `${base}${url}`,
+    method: 'GET',
+    headers: {
+      'Content-Type': 'appliction/x-www-form-urlencode'
+    }
+  })
+}
+
 // export const potRequest = (url, parmas) =>  {
 //   axios({
 //     method: "POST",
