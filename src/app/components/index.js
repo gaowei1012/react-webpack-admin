@@ -18,10 +18,12 @@ import Drags from './ui/Drags';
 import Wysiwygs from './ui/Wysiwygs';
 import BasicAnimations from './Animation/basicAnimations/basicAnimations';
 import ExampleAnimations from './Animation/ExampleAnimations/ExampleAnimations';
+import Echarts from './Echarts';
+import Recharts from './Recharts';
 
 
 export default {
   Dashboard, Register, Login, SiderCustom, SiderMenu, HeaderCustom, Buttoms,
   TencentMap, Icons, Spins, Messages, Carousels, Notifications, Tabs, Modals, 
-  Alerts, Drags, Wysiwygs, BasicAnimations, ExampleAnimations
+  Alerts, Drags, Wysiwygs, BasicAnimations, ExampleAnimations, Echarts, Recharts,
 };
