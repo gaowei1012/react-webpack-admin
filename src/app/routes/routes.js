@@ -31,8 +31,11 @@ class MyRouter extends React.Component {
         {Object.keys(routeConfig).map(key =>
           routeConfig[key].map(r => {
             const route = r => {
+              // 路由的所有组件树
               const Component = AllComponents[r.component];
+              // console.log('Compnent'+ JSON.stringify(AllComponents))
               return (
+                // 遍历路由配置文件，列出匹配
                 <Route
                   key={r.route || r.key}
                   exact

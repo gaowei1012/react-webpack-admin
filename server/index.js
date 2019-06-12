@@ -8,8 +8,10 @@ const app = new Koa()
 let router = new Router()
 
 let user = require('./router/user')
+let dashboard = require('./router/dashboard')
 
-router.use('/user', user.routes())
+router.use('/api/user', user.routes())
+router.use('/api', dashboard.routes())
 
 // 数据库连接操作
 ;(async () => {
