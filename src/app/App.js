@@ -75,7 +75,7 @@ class App extends Component {
                             <Routes auth={auth} />
                         </Content>
                         <Footer style={{ textAlign: 'center' }}>
-                        React-Admin ©{new Date().getFullYear()} Created by 执念
+                        中后端解决方案 ©{new Date().getFullYear()} Created by 执念
                         </Footer>
                     </Layout>
                 </Layout>
