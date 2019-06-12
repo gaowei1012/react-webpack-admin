@@ -17,16 +17,14 @@ class App extends Component {
     componentWillMount() {
         const { setAlitaState } = this.props;
         const user = JSON.parse(localStorage.getItem('user'));
-        // user && receiveData(user, 'auth');
         user && setAlitaState({ stateName: 'auth', data: user });
-        // receiveData({a: 213}, 'auth');
-        // fetchData({funcName: 'admin', stateName: 'auth'});
         this.getClientWidth();
         window.onresize = () => {
             console.log('屏幕变化了');
             this.getClientWidth();
         }
     }
+    /*
     componentDidMount() {
         const openNotification = () => {
             notification.open({
@@ -49,6 +47,7 @@ class App extends Component {
         const isFirst = JSON.parse(localStorage.getItem('isFirst'));
         !isFirst && openNotification();
     }
+    */
     getClientWidth = () => { // 获取当前浏览器宽度并设置responsive管理响应式
         const { setAlitaState } = this.props;
         const clientWidth = window.innerWidth;
