@@ -6,5 +6,5 @@ import Register from './Register/Register';
 import Login from './Login/Login';
 
 export default {
-  Dashboard, Register, Login, SiderCustom, SiderMenu, HeaderCustom,
+  Dashboard, Register, Login, SiderCustom, SiderMenu, HeaderCustom 
 };
