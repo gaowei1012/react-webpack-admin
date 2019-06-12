@@ -15,13 +15,13 @@ module.exports = {
   },
   // 解析
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.json']
+    extensions: ['.ts', '.tsx', '.js', '.json', '.less', '.web.js', '.web.jsx']
   },
   // loader
   module: {
     rules: [
       {
-        test: /\.js|jsx$/,
+        test: /\.(js|jsx)$/,
         exclude: /(node_modules|bower_components)/,// 屏蔽不需要处理的文件（文件夹）（可选）
         loader: 'babel-loader'
       },
@@ -36,11 +36,22 @@ module.exports = {
         include: path.resolve(__dirname, '../src/**/*.js'),
       },
       {// css|less
-        test: /\.(css|less)$/,
-        use: ['style-loader', 'css-loader', 'less-loader']
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.less$/,
+        use: [
+          {loader: 'style-loader'},
+          {loader: 'css-loader'},
+          {
+            loader: 'less-loader',
+            options: {javascriptEnabled: true}
+          }
+        ]
       },
       { // images
-        test: /\.(jpg|png|jpge|gif)$/,
+        test: /\.(jpg|png|jpge|gif|svg)$/,
         use: [{
           loader: 'url-loader',
           options: {
