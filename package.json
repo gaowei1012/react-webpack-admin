@@ -69,7 +69,8 @@
     "react-router-dom": "^4.3.1",
     "redux": "^4.0.1",
     "redux-alita": "^1.0.0",
-    "redux-logger": "^3.0.6"
+    "redux-logger": "^3.0.6",
+    "screenfull": "^4.2.0"
   },
   "pre-commit": [
     "lint"

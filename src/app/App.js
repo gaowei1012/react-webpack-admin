@@ -8,7 +8,7 @@ import HeaderCustom from './components';
 
 const { Content, Footer } = Layout;
 
-class App extends React.PureComponent {
+class App extends React.Component {
   state = {
     collapsed: false,
     title: ''
