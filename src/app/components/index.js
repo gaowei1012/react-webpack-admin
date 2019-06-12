@@ -4,7 +4,7 @@ import SiderMenu from './SilderMenu';
 import HeaderCustom from './HeaderCustom';
 import Register from './Register/Register';
 import Login from './Login/Login';
-import Buttoms from './ui/Buttom';
+import Buttons from './ui/Button';
 import TencentMap from './ui/Map/Tencent';
 import Icons from './ui/Icons';
 import Spins from './ui/Spins';
@@ -28,7 +28,7 @@ import AsynchronousTable from './Tabs/AsynchronousTable';
 
 
 export default {
-  Dashboard, Register, Login, SiderCustom, SiderMenu, HeaderCustom, Buttoms,
+  Dashboard, Register, Login, SiderCustom, SiderMenu, HeaderCustom, Buttons,
   TencentMap, Icons, Spins, Messages, Carousels, Notifications, Tabs, Modals, 
   Alerts, Drags, Wysiwygs, BasicAnimations, ExampleAnimations, Echarts, Recharts,
   BasicForm, BasicAuth, BasicTable, AdvancedTable, AsynchronousTable

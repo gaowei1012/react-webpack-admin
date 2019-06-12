@@ -4,7 +4,7 @@ export default {
       {
           key: '/app/ui', title: 'UI', icon: 'scan',
           subs: [
-              { key: '/app/ui/buttons', title: '按钮', component: 'Buttoms'},
+              { key: '/app/ui/buttons', title: '按钮', component: 'Buttons'},
               { key: '/app/ui/icons', title: '图标', component: 'Icons'},
               { key: '/app/ui/spins', title: '加载中', component: 'Spins'},
               { key: '/app/ui/modals', title: '对话框', component: 'Modals'},
