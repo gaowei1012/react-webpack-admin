@@ -54,7 +54,7 @@ class MyRouter extends React.Component {
                         <Component {...merge} />
                       </DocumentTitle>
                     );
-                    return r.login ? wrappedComponent : this.requireLogin(wrappedComponent, r.auth);
+                    return r.login ? wrappedComponent : this.requiredLogin(wrappedComponent, r.auth);
                   }}
                 />
               );
