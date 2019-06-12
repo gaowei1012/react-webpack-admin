@@ -38,6 +38,16 @@ module.exports = {
       {// css|less
         test: /\.(css|less)$/,
         use: ['style-loader', 'css-loader', 'less-loader']
+      },
+      { // images
+        test: /\.(jpg|png|jpge|gif)$/,
+        use: [{
+          loader: 'url-loader',
+          options: {
+            limit: 8192,
+            name: 'images/[name]-[hash:8].[ext]'
+          }
+        }]
       }
     ]
   },
