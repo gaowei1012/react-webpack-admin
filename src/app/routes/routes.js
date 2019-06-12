@@ -50,6 +50,7 @@ class MyRouter extends React.Component {
                     const merge = { ...props, query: queryParams ? queryString.parse(queryParams[0]) : {} };
                     // 重新包装组件
                     const wrappedComponent = (
+                      // 当前组件(title)字段
                       <DocumentTitle title={r.title}>
                         <Component {...merge} />
                       </DocumentTitle>
