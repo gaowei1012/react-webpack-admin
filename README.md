@@ -39,6 +39,6 @@ https://github.com/gmw-zjw/my_webpack/tree/master/05webpack-react
   继承服务端渲染，虽然本项目没有用到这一点，但是作为整合资源 加入服务端渲染，需要使用的同学可以看server下面的代码
 
 ## 国际化
-  <b>多语言支持</b>
+  多语言支持
 
 
