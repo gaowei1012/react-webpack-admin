@@ -22,11 +22,14 @@ import Echarts from './Echarts';
 import Recharts from './Recharts';
 import BasicForm from './form/BasicForm';
 import BasicAuth from './auth/baeAuth';
+import BasicTable from './Tabs/BasicTable';
+import AdvancedTable from './Tabs/AdvancedTable';
+import AsynchronousTable from './Tabs/AsynchronousTable';
 
 
 export default {
   Dashboard, Register, Login, SiderCustom, SiderMenu, HeaderCustom, Buttoms,
   TencentMap, Icons, Spins, Messages, Carousels, Notifications, Tabs, Modals, 
   Alerts, Drags, Wysiwygs, BasicAnimations, ExampleAnimations, Echarts, Recharts,
-  BasicForm, BasicAuth
+  BasicForm, BasicAuth, BasicTable, AdvancedTable, AsynchronousTable
 };
