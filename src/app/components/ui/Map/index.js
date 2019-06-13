@@ -1,6 +1,6 @@
 import React from 'react';
 import { Map } from 'react-amap';
-import { Row } from 'antd';
+import { Row, Col, Card } from 'antd';
 import BreadcrumbCustom from './../../BreadcrumbCustom';
 
 /**
@@ -13,10 +13,14 @@ class EMap extends React.Component {
 
   render() {
     return (
-      <div style={{width: '100%', height: '100%'}}>
+      <div>
         <BreadcrumbCustom first='UI' second='地图' />
-        <Row style={{marginTop: '20px'}}>
-          <Map amapkey={this.amapkey}  />
+        <Row>
+          <Card title='高德地图'>
+            <div style={{height: '500px'}}>
+              <Map amapkey={this.amapkey} />
+            </div>
+          </Card>
         </Row>
       </div>
     )
