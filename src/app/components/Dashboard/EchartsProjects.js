@@ -10,7 +10,7 @@ for (let i = 0; i < 50; i++) {
 
 const option = {
     title: {
-        text: '最近50天每天项目完成情况',
+        text: '最近20天每天项目完成情况',
         left: 'center',
         textStyle: {
             color: '#ccc',
@@ -68,7 +68,7 @@ const option = {
         showSymbol: false,
         animationDelay: 0,
         animationEasing: 'linear',
-        animationDuration: 1200,
+        animationDuration: 2400,
         lineStyle: {
             normal: {
                 color: 'transparent'
@@ -77,7 +77,7 @@ const option = {
         areaStyle: {
             normal: {
                 color: '#08263a',
-                shadowBlur: 50,
+                shadowBlur: 20,
                 shadowColor: '#000'
             }
         }

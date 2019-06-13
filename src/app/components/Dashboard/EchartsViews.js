@@ -29,7 +29,7 @@ const option = {
     },
     xAxis: {
         type: 'category',
-        data: ['2017-05-01', '2017-05-02', '2017-05-03', '2017-05-04', '2017-05-05', '2017-05-06','2017-05-07'],
+        data: ['2019-05-01', '2019-05-02', '2019-05-03', '2019-05-04', '2019-05-05', '2019-05-06','2019-05-07'],
         boundaryGap: false,
         splitLine: {
             show: true,
@@ -82,7 +82,7 @@ const option = {
         showSymbol: false,
         symbol: 'circle',
         symbolSize: 6,
-        data: ['1200', '1400', '808', '811', '626', '488', '1600'],
+        data: ['1210', '1200', '1808', '1811', '1626', '888', '900'],
         areaStyle: {
             normal: {
                 color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
