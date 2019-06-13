@@ -52,7 +52,10 @@ class Notifications extends React.Component {
       description: '我是自定义图标的通知',
       icon: <Icon type='smile' style={{color: '#108ee9'}} />,
       placement: "topLeft",
-      duration: 3
+      duration: 3,
+      onClick: () => {
+        console.log('ok')
+      }
     })
   }
 
