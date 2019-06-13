@@ -1,5 +1,6 @@
 import React from 'react';
 import { Row, Col, Card, message, Button } from 'antd';
+import BreadcrumbCustom from './../BreadcrumbCustom';
 
 class Messages extends React.Component {
 
@@ -29,6 +30,7 @@ class Messages extends React.Component {
   render() {
     return(
       <div>
+        <BreadcrumbCustom first='UI' second='全局消息'/>
         <Row style={{marginTop: '30px'}}>
           <Col span={10} >
             <Card title='基础用法'>
