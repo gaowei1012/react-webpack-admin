@@ -1,5 +1,5 @@
 import React from 'react';
-import { Spin, Col, Row, Card, Alert } from 'antd';
+import { Spin, Col, Row, Card, Alert, Icon } from 'antd';
 import BreadcrumbCustom from './../BreadcrumbCustom';
 
 class Spins extends React.Component {
