@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Card, Col, Row, Icon } from 'antd';
+import BreadcrumbCustom from './../BreadcrumbCustom';
 
 const ButtonGroup = Button.Group;
 
@@ -9,6 +10,7 @@ class Buttons extends React.Component {
   render() {
     return (
       <div>
+        <BreadcrumbCustom first='UI' second='按钮' />
         <Row>
           <Col span={10} >
             <Card title="基础用法" size="small" style={{marginTop: '30px'}}>
