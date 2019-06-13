@@ -1,5 +1,6 @@
 import React from 'react';
 import { notification, Card, Row, Col, Button, Icon } from 'antd';
+import BreadcrumbCustom from './../BreadcrumbCustom';
 
 class Notifications extends React.Component {
 
@@ -63,6 +64,7 @@ class Notifications extends React.Component {
   render() {
     return(
       <div>
+        <BreadcrumbCustom first='UI' second='通知提醒' />
         <Row style={{marginTop: '30px'}}>
           <Col span={10}>
             <Card title='基础用法'>
