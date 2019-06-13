@@ -5,7 +5,7 @@ import HeaderCustom from './HeaderCustom';
 import Register from './Register/Register';
 import Login from './Login/Login';
 import Buttons from './ui/Button';
-import TencentMap from './ui/Map/Tencent';
+import EMap from './ui/Map';
 import Icons from './ui/Icons';
 import Spins from './ui/Spins';
 import Messages from './ui/Messages';
@@ -29,7 +29,7 @@ import AsynchronousTable from './Tabs/AsynchronousTable';
 
 export default {
   Dashboard, Register, Login, SiderCustom, SiderMenu, HeaderCustom, Buttons,
-  TencentMap, Icons, Spins, Messages, Banner, Notifications, MyTabs, Modals, 
+  EMap, Icons, Spins, Messages, Banner, Notifications, MyTabs, Modals, 
   Alerts, Drags, Wysiwygs, BasicAnimations, ExampleAnimations, Echarts, Recharts,
   BasicForm, BasicAuth, BasicTable, AdvancedTable, AsynchronousTable
 };
