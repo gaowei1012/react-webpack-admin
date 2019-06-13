@@ -8,6 +8,7 @@ for (let i = 0; i < 50; i++) {
     data.push(Math.ceil((Math.cos(i / 5) * (i / 5) + i / 6) * 5) + 10);
 }
 
+
 const option = {
     title: {
         text: '最近20天每天项目完成情况',

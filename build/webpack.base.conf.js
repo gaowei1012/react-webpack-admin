@@ -23,7 +23,10 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /(node_modules|bower_components)/,// 屏蔽不需要处理的文件（文件夹）（可选）
-        loader: 'babel-loader'
+        loader: 'babel-loader',
+        // query: { // 编译jsx语法
+        //   presets: ['es2015','react']
+        // }  
       },
       {// eslint
         test: /\.js[x]?$/,

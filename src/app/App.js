@@ -10,6 +10,7 @@ import { connectAlita } from 'redux-alita';
 const { Content, Footer } = Layout;
 
 class App extends Component {
+    
     state = {
         collapsed: false,
         title: ''

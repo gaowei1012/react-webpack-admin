@@ -3,7 +3,7 @@ import SiderCustom from './SiderCustom';
 import SiderMenu from './SilderMenu';
 import HeaderCustom from './HeaderCustom';
 import Register from './Register/Register';
-import Login from './Login/Login';
+// import Login from './Login/Login';
 import Buttons from './ui/Button';
 import EMap from './ui/Map';
 import Icons from './ui/Icons';
@@ -28,7 +28,7 @@ import AsynchronousTable from './Tabs/AsynchronousTable';
 
 
 export default {
-  Dashboard, Register, Login, SiderCustom, SiderMenu, HeaderCustom, Buttons,
+  Dashboard, Register, SiderCustom, SiderMenu, HeaderCustom, Buttons,
   EMap, Icons, Spins, Messages, Banner, Notifications, MyTabs, Modals, 
   Alerts, Drags, Wysiwygs, BasicAnimations, ExampleAnimations, Echarts, Recharts,
   BasicForm, BasicAuth, BasicTable, AdvancedTable, AsynchronousTable
