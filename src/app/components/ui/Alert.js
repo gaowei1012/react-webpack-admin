@@ -92,18 +92,21 @@ class Alerts extends React.Component {
                 message='成功'
                 banner
                 closable
+                style={{marginBottom: '10px'}}
               />
               <Alert
                 type='error'
                 message='失败'
                 banner
                 closable
+                style={{marginBottom: '10px'}}
               />
               <Alert
                 type='warning'
                 message='警告⚠️'
                 banner
                 closable
+                style={{marginBottom: '10px'}}
               />
               <Alert
                 type='info'
