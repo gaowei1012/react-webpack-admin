@@ -10,7 +10,7 @@ import Icons from './ui/Icons';
 import Spins from './ui/Spins';
 import Messages from './ui/Messages';
 import Notifications from './ui/Notifications';
-import Carousels from './ui/Carousels';
+import Banner from './ui/Banner/index';
 import MyTabs from './ui/Tabs';
 import Modals from './ui/Modals';
 import Alerts from './ui/Alert';
@@ -29,7 +29,7 @@ import AsynchronousTable from './Tabs/AsynchronousTable';
 
 export default {
   Dashboard, Register, Login, SiderCustom, SiderMenu, HeaderCustom, Buttons,
-  TencentMap, Icons, Spins, Messages, Carousels, Notifications, MyTabs, Modals, 
+  TencentMap, Icons, Spins, Messages, Banner, Notifications, MyTabs, Modals, 
   Alerts, Drags, Wysiwygs, BasicAnimations, ExampleAnimations, Echarts, Recharts,
   BasicForm, BasicAuth, BasicTable, AdvancedTable, AsynchronousTable
 };
