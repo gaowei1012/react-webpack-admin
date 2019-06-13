@@ -13,7 +13,7 @@ class Buttons extends React.Component {
         <BreadcrumbCustom first='UI' second='按钮' />
         <Row>
           <Col span={10} >
-            <Card title="基础用法" size="small" style={{marginTop: '30px'}}>
+            <Card title="基础用法12" size="small" style={{marginTop: '30px'}}>
               <Button type="danger" title='danger'>danger</Button>
               <Button type="dashed" title='dashed'>dashed</Button>
               <Button type="default" title='default'>default</Button>
