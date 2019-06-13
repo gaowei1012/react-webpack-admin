@@ -1,5 +1,7 @@
 import React from 'react';
 import { Modal, Col, Row, Card, Button } from 'antd';
+import BreadcrumbCustom from './../BreadcrumbCustom';
+
 
 class Modals extends React.Component {
 
@@ -145,6 +147,7 @@ class Modals extends React.Component {
     const { visible, confirmLoading, asyncVisible, customizeVisible, loading } = this.state;
     return(
       <div>
+        <BreadcrumbCustom first='UI' second='对话框' /> 
         <Row style={{marginTop: '30px'}}>
           <Col span={10}>
             <Card title='默认用法'>
