@@ -1,5 +1,6 @@
 import React from 'react';
 import { Row, Col, Alert, Card } from 'antd';
+import BreadcrumbCustom from './../BreadcrumbCustom';
 
 class Alerts extends React.Component {
 
@@ -14,6 +15,7 @@ class Alerts extends React.Component {
   render() {
     return(
       <div>
+        <BreadcrumbCustom first='UI' second='警告提示'/>
         <Row style={{marginTop: '30px'}}>
           <Col span={10}>
             <Card title='基本用法'>
