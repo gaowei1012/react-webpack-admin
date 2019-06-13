@@ -1,5 +1,6 @@
 import React from 'react';
 import { Icon, Row, Col } from 'antd';
+import BreadcrumbCustom from './../BreadcrumbCustom';
 
 class Icons extends React.Component {
 
@@ -16,6 +17,7 @@ class Icons extends React.Component {
   render() {
     return (
       <div>
+        <BreadcrumbCustom first='UI' second='ICON'/>
         <Row>
           <Col span={24} style={{marginTop: '20px'}}>
             {this.IconData.map((item, index) => (
