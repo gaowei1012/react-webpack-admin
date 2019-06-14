@@ -1,9 +1,12 @@
 import React from 'react';
+import TwwenOne from 'rc-tween-one';
 
 class BasicAnimations extends React.Component {
   render(){
     return(
-      <div>基础动画</div>
+      <TwwenOne
+        animation={{x: 100}}
+      />
     )
   }
 }
