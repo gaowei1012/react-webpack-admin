@@ -20,7 +20,6 @@ import BasicAnimations from './Animation/basicAnimations/basicAnimations';
 import ExampleAnimations from './Animation/ExampleAnimations/ExampleAnimations';
 import Echarts from './Echarts';
 import Recharts from './Recharts';
-import BasicForm from './form/BasicForm';
 import BasicAuth from './auth/baeAuth';
 import BasicTable from './Tabs/BasicTable';
 import AdvancedTable from './Tabs/AdvancedTable';
@@ -31,5 +30,5 @@ export default {
   Dashboard, Register, SiderCustom, SiderMenu, HeaderCustom, Buttons,
   EMap, Icons, Spins, Messages, Banner, Notifications, MyTabs, Modals, 
   Alerts, Drags, Wysiwygs, BasicAnimations, ExampleAnimations, Echarts, Recharts,
-  BasicForm, BasicAuth, BasicTable, AdvancedTable, AsynchronousTable
+  BasicAuth, BasicTable, AdvancedTable, AsynchronousTable
 };
