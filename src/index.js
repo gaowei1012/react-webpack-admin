@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Page from './Page';
 import { AlitaProvider } from 'redux-alita';
+import 'antd/dist/antd.css';
 import './style/lib/animate.css';
 import './style/antd/index.less';
 import './style/index.less';
