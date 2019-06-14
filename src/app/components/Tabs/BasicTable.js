@@ -81,7 +81,7 @@ class BasicTable extends React.Component {
 
     return(
       <div style={{margin: '10px 10px 10px 10px'}}>
-        <Table showHeader size='middle' dataSource={dataSoucre} columns={columns} />
+        <Table showHeader={true} size='middle' dataSource={dataSoucre} columns={columns} />
       </div>
     )
   }
