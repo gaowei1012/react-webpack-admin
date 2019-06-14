@@ -21,8 +21,8 @@ import ExampleAnimations from './Animation/ExampleAnimations/ExampleAnimations';
 import Echarts from './Echarts';
 import Recharts from './Recharts';
 import BasicAuth from './auth/baeAuth';
-import BasicTable from './Tabs/BasicTable';
-import AdvancedTable from './Tabs/AdvancedTable';
+import BasicTable from './Tabs/BasicTable/BasicTable';
+import AdvancedTable from './Tabs/HotTbale/AdvancedTable';
 import AsynchronousTable from './Tabs/AsynchronousTable';
 
 
