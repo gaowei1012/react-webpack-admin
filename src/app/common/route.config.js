@@ -13,6 +13,7 @@ export default {
               { key: '/app/ui/banners', title: '轮播图', component: 'Banner'},
               { key: '/app/ui/wysiwyg', title: '富文本', component: 'Wysiwygs'},
               { key: '/app/ui/drags', title: '拖拽', component: 'Drags'},
+              { key: '/app/ui/emoji', title: 'emoji', component: 'EmojiMart' },
             //   { key: '/app/ui/gallery', title: '画廊', component: 'Gallery'},
               { key: '/app/ui/map', title: '地图', component: 'EMap'},
               { key: '/app/ui/message', title: '全局通知', component: 'Messages'},

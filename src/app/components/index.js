@@ -21,6 +21,7 @@ import ExampleAnimations from './Animation/ExampleAnimations/ExampleAnimations';
 import Echarts from './Echarts';
 import Recharts from './Recharts';
 import BasicAuth from './auth/baeAuth';
+import EmojiMart from './ui/emoji';
 import BasicDatePircker from './DatePicker/DatePicker';
 import BasicTable from './Tabs/BasicTable/BasicTable';
 import AdvancedTable from './Tabs/HotTbale/AdvancedTable';
@@ -31,5 +32,5 @@ export default {
   Dashboard, Register, SiderCustom, SiderMenu, HeaderCustom, Buttons,
   EMap, Icons, Spins, Messages, Banner, Notifications, MyTabs, Modals, 
   Alerts, Drags, Wysiwygs, BasicAnimations, ExampleAnimations, Echarts, Recharts,
-  BasicAuth, BasicTable, AdvancedTable, AsynchronousTable, BasicDatePircker
+  BasicAuth, BasicTable, AdvancedTable, AsynchronousTable, BasicDatePircker, EmojiMart
 };
