@@ -23,7 +23,7 @@ import Recharts from './Recharts';
 import BasicAuth from './auth/baeAuth';
 import BasicTable from './Tabs/BasicTable/BasicTable';
 import AdvancedTable from './Tabs/HotTbale/AdvancedTable';
-import AsynchronousTable from './Tabs/AsynchronousTable';
+import AsynchronousTable from './Tabs/AsyncTable/AsynchronousTable';
 
 
 export default {
