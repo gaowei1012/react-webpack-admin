@@ -100,7 +100,6 @@ class BasicTable extends React.Component {
             />
           </Card>
         </Row>
-        {/* <Table showHeader={true} size='middle' dataSource={dataSoucre} columns={columns} /> */}
       </div>
     )
   }
