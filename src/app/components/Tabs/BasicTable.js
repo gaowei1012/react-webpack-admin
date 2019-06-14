@@ -4,7 +4,7 @@ import { Table, Tag, Divider } from 'antd';
 class BasicTable extends React.Component {
 
   render() {
-
+    
     const columns = [
       {
         title: 'Nmae',
