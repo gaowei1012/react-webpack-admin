@@ -1,6 +1,8 @@
 'use strict'
 const path = require('path');
 const webpack = require('webpack');
+// const ExtractTextPlugin = require('extract-text-webpack-plugin');
+// const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -41,6 +43,21 @@ module.exports = {
       {// css|less
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
+        // use: [
+        //   {
+        //     loader: MiniCssExtractPlugin.loader,
+        //     options: {
+        //       publicPath: (resourcePath, context) => {
+        //         // publicPath is the relative path of the resource to the context
+        //         // e.g. for ./css/admin/main.css the publicPath will be ../../
+        //         // while for ./css/main.css the publicPath will be ../
+        //         return path.relative(path.dirname(resourcePath), context) + '/';
+        //       },
+        //     },
+        //   },
+        //   'style-loader',
+        //   'css-loader'
+        // ]
       },
       {
         test: /\.less$/,
@@ -71,6 +88,13 @@ module.exports = {
       filename: 'index.html',
       template: 'index.html',
       inject: 'body'
-    })
+    }),
+    // minix extract css
+    // new MiniCssExtractPlugin({
+    //   // Options similar to the same options in webpackOptions.output
+    //   // both options are optional
+    //   filename: '[name].css',
+    //   chunkFilename: '[id].css'
+    // })
   ]
 };
