@@ -35,6 +35,12 @@ export default {
           ],
       },
       {
+          key: 'app/datepicker', title: '日历', icon: 'calendar',
+          subs: [
+              { key: '/app/datepicker/basicpicker', title: '基础日历', component: 'BasicDatePircker' }
+          ]
+      },
+      {
           key: '/app/form', title: '表单', icon: 'edit',
           subs: [
               { key: '/app/form/basicForm', title: '基础表单', component: 'BasicForm'},
