@@ -19,11 +19,11 @@ const columns = [
 ];
 
 const dataSocure = []
-for(let i = 0; i <= 46; i++) {
+for(let i = 1; i < 46; i++) {
   dataSocure.push({
-    key: `${i}`,
+    key: i,
     name: `John Brown ${i}`,
-    age: i++,
+    age: i,
     address: `New York No. ${i} Lake Park`
   })
 }
