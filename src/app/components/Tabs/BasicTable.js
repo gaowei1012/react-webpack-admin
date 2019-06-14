@@ -1,10 +1,18 @@
 import React from 'react';
-import { Table, Tag, Divider } from 'antd';
+import { Table, Tag, Divider, Card, Row } from 'antd';
 
 class BasicTable extends React.Component {
 
+  state = {
+    basicTitle: '基础表格',
+    showHeader: true,
+    basicSize: 'middle'
+  }
+
   render() {
-    
+
+    const { basicTitle, showHeader, basicSize } = this.state;
+
     const columns = [
       {
         title: 'Nmae',
@@ -14,7 +22,7 @@ class BasicTable extends React.Component {
       },
       {
         title: 'Age',
-        dataIndex: 'gae',
+        dataIndex: 'age',
         key: 'age'
       },
       {
@@ -81,7 +89,18 @@ class BasicTable extends React.Component {
 
     return(
       <div style={{margin: '10px 10px 10px 10px'}}>
-        <Table showHeader={true} size='middle' dataSource={dataSoucre} columns={columns} />
+        {/* basic table */}
+        <Row>
+          <Card title={basicTitle}>
+            <Table
+              showHeader={showHeader}
+              size={basicSize}
+              dataSource={dataSoucre}
+              columns={columns}
+            />
+          </Card>
+        </Row>
+        {/* <Table showHeader={true} size='middle' dataSource={dataSoucre} columns={columns} /> */}
       </div>
     )
   }
