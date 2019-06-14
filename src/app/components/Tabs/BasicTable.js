@@ -1,6 +1,8 @@
 import React from 'react';
 import { Table, Tag, Divider, Card, Row } from 'antd';
 import BasicCheckboxTable from './BasicCheckTable';
+import BasicZhanTable from './BasicZhanTable';
+import BasicFixedTable from './BasicFixedTable';
 
 class BasicTable extends React.Component {
 
@@ -103,6 +105,12 @@ class BasicTable extends React.Component {
         </Row>
         <div style={{marginTop: '20px'}}>
          <BasicCheckboxTable />
+        </div>
+        <div style={{marginTop: '20px'}}>
+          <BasicZhanTable />
+        </div>
+        <div style={{marginTop: '20px'}}>
+          <BasicFixedTable />
         </div>
       </div>
     )

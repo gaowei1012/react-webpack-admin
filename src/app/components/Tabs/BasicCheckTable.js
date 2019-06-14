@@ -82,6 +82,7 @@ render() {
               columns={columns}
               dataSource={dataSocure}
               rowSelection={rowSelection}
+              bordered
             />
           </Card>
         </Row>
