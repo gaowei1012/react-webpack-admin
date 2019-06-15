@@ -12,4 +12,5 @@ class EmojiMart extends React.Component {
   }
 }
 
+
 export default EmojiMart;
