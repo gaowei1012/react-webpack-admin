@@ -1,7 +1,8 @@
 const Router = require('koa-router')
 const mongoose = require('mongoose')
-const jwt = require('jsonwebtoken')
-const config = require('../config/config')
+// const jwt = require('jsonwebtoken')
+// const config = require('../config/config')
+const getToken = require('../utils/getToken')
 let router = new Router()
 
 router.get('/', async (ctx, next) => {
@@ -74,7 +75,8 @@ router.post('/login', async (ctx, next) => {
     if (result) {
       let newUser = new User()
       // token
-      let token = jwt.sign({username}, config.secretOrKey, { expiresIn: 60 * 60 * 60 * 24 })
+      // let token = jwt.sign({username}, config.secretOrKey, { expiresIn: '4h' })
+      let token = getToken({username})
       await newUser.comparePassword(password, result.password)
         .then((isMatch) => {
           ctx.body = {
