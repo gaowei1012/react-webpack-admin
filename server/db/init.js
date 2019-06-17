@@ -1,7 +1,8 @@
 // 数据库连接操作
 // 初始化数据库，连接优化处理
 const mongoose = require('mongoose')
-const url = 'mongodb://localhost:27017/fl_service'
+// const url = 'mongodb://localhost:27017/fl_service'
+const config = require('./../config/config')
 const glob = require('glob')
 const { resolve } = require('path')
 
@@ -12,7 +13,7 @@ exports.initShema = () => {
 
 // mongodb connect 
 exports.connect = () => {
-  mongoose.connect(url)
+  mongoose.connect(config.db)
   let maxConnection = 0
 
   return new Promise((resolve, reject) => {
@@ -20,7 +21,7 @@ exports.connect = () => {
       console.log('数据库连接成功')
       if (maxConnection <= 3) {
         maxConnection++
-        mongoose.connect(url)
+        mongoose.connect(config.db)
       }
       else {
         reject()
@@ -32,7 +33,7 @@ exports.connect = () => {
       console.log('数据量连接失败')
       if (maxConnection <= 3) {
         maxConnection++
-        mongoose.connect(url)
+        mongoose.connect(config.db)
       }
       else {
         reject()

@@ -28,7 +28,7 @@ userSchema.pre('save', function(next) {
   })
 })
 
-userSchema.method = {
+userSchema.methods = {
   // 对比两次密码是否为一致
   comparePassword: (_password, password) => {
     return new Promise((resolve, reject) => {
