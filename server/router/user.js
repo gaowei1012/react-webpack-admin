@@ -23,10 +23,26 @@ router.post('/register', async (ctx, next) => {
   // 为了防止用户重复注册
   // 查询当前用户注册的用户名是否重复
   const user = await User.findOne({username})
-  if(user.username == username) {
-    ctx.body = {
-      code: 1,
-      message: '用户名重复，请重新更换用户名'
+  // 在查询不为空的情况下
+  if (user !== null) {
+    if(user.username == ctx.request.body.username) {
+      ctx.body = {
+        code: 1,
+        message: '用户名重复，请重新更换用户名'
+      }
+    } else {
+      await newUser.save().then(() => {
+        ctx.body = {
+          code: 0,
+          message: '注册成功'
+        }
+      })
+      .catch(err => {
+        ctx.body = {
+          code: 500,
+          message: `注册失败${err}`
+        }
+      })
     }
   } else {
     await newUser.save().then(() => {
@@ -37,12 +53,12 @@ router.post('/register', async (ctx, next) => {
     })
     .catch(err => {
       ctx.body = {
-        code: 500,
+        coed: 500,
         message: `注册失败${err}`
       }
     })
   }
-
+  
   await next()
 })
 
