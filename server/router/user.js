@@ -23,7 +23,6 @@ router.post('/register', async (ctx, next) => {
   // 为了防止用户重复注册
   // 查询当前用户注册的用户名是否重复
   const user = await User.findOne({username})
-  // console.log(user.username)
   if(user.username == username) {
     ctx.body = {
       code: 1,
@@ -43,18 +42,6 @@ router.post('/register', async (ctx, next) => {
       }
     })
   }
-
-  // await newUser.save().then(() => {
-  //   ctx.body = {
-  //     code: 0,
-  //     message: '注册成功!'
-  //   }
-  // }).catch(err => {
-  //   ctx.body = {
-  //     code: 500,
-  //     message: `注册失败${err}`
-  //   }
-  // })
 
   await next()
 })
