@@ -1,5 +1,7 @@
 const Router = require('koa-router')
 const mongoose = require('mongoose')
+const jwt = require('jsonwebtoken')
+const config = require('../config/config')
 let router = new Router()
 
 router.get('/', async (ctx, next) => {
@@ -42,6 +44,36 @@ router.post('/login', async (ctx, next) => {
 
   const User = mongoose.model('User')
 
+  await User.findOne({username}).exec()
+    .then(async user => {
+      if (user) {
+        let newUser = new User()
+        // 密码加密后处理,设置token作为登录验证
+        // expiresIn 过期时效性
+        let token = jwt.sign({username}, config.secretOrKey, {expiresIn: 60 * 60 * 1})
+        await newUser.comparePassword(password, user.password)
+          .then(isMatch => {
+            ctx.body = {
+              code: 0,
+              message: '登录成功',
+              token: token
+            }
+          })
+          .catch(error => {
+            ctx.body = {
+              code: 1,
+              message: 'error: ' + error
+            }
+          })
+      } else {
+        ctx.body = {
+          code: 1,
+          message: '登录失败,请检查用户名或密码是否正确'
+        }
+      }
+    })
+
+  /*
   await User.findOne({username: username}).exec()
     .then(async result => {
       if (result) {
@@ -72,9 +104,11 @@ router.post('/login', async (ctx, next) => {
         message: err
       }
     })
+    */
 
   await next()
 })
+
 
 
 module.exports = router
