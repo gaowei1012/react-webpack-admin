@@ -11,19 +11,19 @@ class Banner extends React.Component {
       <div>
         <BreadcrumbCustom first='UI' second='轮播'/>
         <Row style={{marginTop: '20px'}}>
-          <Col span={10}>
+          <Col span={12}>
             <Card title='基本用法'>
               <Basic />
             </Card>
           </Col>
-          <Col span={10} style={{marginLeft: '30px'}}>
-            <Card title='自由轮播'>
+          <Col span={12}>
+            <Card title='自由轮播' style={{marginLeft: '10px'}}>
               <AutoPlay />
             </Card>
           </Col>
         </Row>
         <Row style={{marginTop: '20px'}}>
-          <Col span={10}>
+          <Col span={12}>
             <Card title='渐显'>
               <Gradient />
             </Card>
