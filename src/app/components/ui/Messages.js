@@ -32,7 +32,7 @@ class Messages extends React.Component {
       <div>
         <BreadcrumbCustom first='UI' second='全局消息'/>
         <Row style={{marginTop: '30px'}}>
-          <Col span={10} >
+          <Col span={12} >
             <Card title='基础用法'>
               <Button type='default' onClick={this.BasicMessage}>
                 Info
@@ -48,8 +48,8 @@ class Messages extends React.Component {
               </Button>
             </Card>
           </Col>
-          <Col span={10} style={{marginLeft: '30px'}}>
-            <Card title='演示操作'>
+          <Col span={12}>
+            <Card title='演示操作' style={{marginLeft: '10px'}}>
               <Button type='default' onClick={this.handleDemonstration}>
                 演示演示
               </Button>
