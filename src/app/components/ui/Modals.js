@@ -149,7 +149,7 @@ class Modals extends React.Component {
       <div>
         <BreadcrumbCustom first='UI' second='对话框' /> 
         <Row style={{marginTop: '30px'}}>
-          <Col span={10}>
+          <Col span={12}>
             <Card title='默认用法'>
               <Button type='default' onClick={this.handleOpenModal}>
                 Open Modal
@@ -166,8 +166,8 @@ class Modals extends React.Component {
               </Modal>
             </Card>
           </Col>
-          <Col span={10} style={{marginLeft: '30px'}}>
-            <Card title='异步关闭'>
+          <Col span={12}>
+            <Card title='异步关闭' style={{marginLeft: '10px'}}>
               <Button type='default' onClick={this.OpenAsyncModal}>
                 Async Modal
               </Button>
@@ -186,7 +186,7 @@ class Modals extends React.Component {
           </Col>
         </Row>
         <Row style={{marginTop: '30px'}}>
-          <Col span={10}>
+          <Col span={12}>
             <Card title='自定义modal脚本(footer)'>
               <Button type='default' onClick={this.openCustomizeModal}>
                 customize Modal
@@ -211,8 +211,8 @@ class Modals extends React.Component {
               </Modal>
             </Card>
           </Col>
-          <Col span={10} style={{marginLeft: '30px'}}>
-            <Card title='对话框'>
+          <Col span={12}>
+            <Card title='对话框' style={{marginLeft: '10px'}}>
               <Button type='default' onClick={this.Info}>
                 Info
               </Button>
