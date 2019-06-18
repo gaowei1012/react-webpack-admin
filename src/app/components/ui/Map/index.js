@@ -1,6 +1,6 @@
 import React from 'react';
 import { Map } from 'react-amap';
-import { Row, Col, Card } from 'antd';
+import { Row, Card } from 'antd';
 import BreadcrumbCustom from './../../BreadcrumbCustom';
 
 /**
