@@ -8,13 +8,13 @@ class Spins extends React.Component {
       <div>
         <BreadcrumbCustom first='UI' second='加载中' />
         <Row style={{marginTop: '20px'}}>
-          <Col span={10}>
-            <Card title='基本用法'>
+          <Col span={12}>
+            <Card title='基本用法'style={{paddingBottom: '30px'}}>
               <Spin />
             </Card>
           </Col>
-          <Col span={10} style={{marginLeft: '20px'}}>
-            <Card title='自定义文案'>
+          <Col span={12}>
+            <Card title='自定义文案' style={{marginLeft: '10px'}}>
             <Spin tip="Loading...">
               <Alert
                 message="Alert message title"
@@ -26,7 +26,7 @@ class Spins extends React.Component {
           </Col>
         </Row>
         <Row style={{marginTop: '30px'}}>
-          <Col span={10}>
+          <Col span={12}>
             <Card title='自定义指示符'>
               <Spin indicator={<Icon type="loading" style={{ fontSize: 24 }} spin />} />
             </Card>
