@@ -1,53 +1,54 @@
 import React from 'react';
 import { DatePicker, Row, Col, Card } from 'antd';
+import moment from 'moment';
 
 const { RangePicker, MonthPicker, WeekPicker } = DatePicker;
 
 class BasicDatePircker extends React.Component {
-
-
-  onChange = (dates, dateStrings) => {
+  onChanged = (dates, dateStrings) => {
     console.log('From: ', dates[0], ', to: ', dates[1]);
     console.log('From: ', dateStrings[0], ', to: ', dateStrings[1]);
-  }
+  };
 
   render() {
     return (
       <div>
-        <Row style={{marginTop: '20px'}}>
-          <Col span={10}>
-            <Card title='基础用法'>
-            <DatePicker onChange={onChange} />
-            <br />
-            <MonthPicker onChange={onChange} placeholder="Select month" />
-            <br />
-            <RangePicker onChange={onChange} />
-            <br />
-            <WeekPicker onChange={onChange} placeholder="Select week" />
+        <Row style={{ marginTop: '20px' }}>
+          <Col span={12}>
+            <Card title="基础用法">
+              <DatePicker onChange={this.onChanged} />
+              <br />
+              <MonthPicker onChange={this.onChanged} placeholder="Select month" />
+              <br />
+              <RangePicker onChange={this.onChanged} />
+              <br />
+              <WeekPicker onChange={this.onChanged} placeholder="Select week" />
             </Card>
           </Col>
-          <Col span={10} style={{marginLeft: '30px'}}>
-          <RangePicker
-            ranges={{
-              Today: [moment(), moment()],
-              'This Month': [moment().startOf('month'), moment().endOf('month')],
-            }}
-            onChange={onChange}
-          />
-          <br />
-          <RangePicker
-            ranges={{
-              Today: [moment(), moment()],
-              'This Month': [moment().startOf('month'), moment().endOf('month')],
-            }}
-            showTime
-            format="YYYY/MM/DD HH:mm:ss"
-            onChange={onChange}
-          /> 
+          <Col span={12}>
+            <Card title='常用用法' style={{marginLeft: '10px'}}>
+              <RangePicker
+                ranges={{
+                  Today: [moment(), moment()],
+                  'This Month': [moment().startOf('month'), moment().endOf('month')]
+                }}
+                onChange={this.onChanged}
+              />
+              <br />
+              <RangePicker
+                ranges={{
+                  Today: [moment(), moment()],
+                  'This Month': [moment().startOf('month'), moment().endOf('month')]
+                }}
+                showTime
+                format="YYYY/MM/DD HH:mm:ss"
+                onChange={this.onChanged}
+              />
+            </Card>
           </Col>
         </Row>
       </div>
-    )
+    );
   }
 }
 
