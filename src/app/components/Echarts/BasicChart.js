@@ -27,7 +27,7 @@ class BasicChart extends React.Component {
 
   render() {
     return(
-      <div id='echarts' style={{width: '400px', height: '300px'}}></div>
+      <div id='echarts' style={{width: '450px', height: '300px', textAlign: 'center'}}></div>
     )
   }
 }
