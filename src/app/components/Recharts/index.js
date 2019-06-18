@@ -1,6 +1,6 @@
 import React from 'react';
 import { LineChart, BarChart, Line,XAxis, YAxis, CartesianGrid, Tooltip, Legend, AreaChart, Area, Bar, PieChart, Pie, Sector,  Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, } from 'recharts';
-import { Row, Col } from 'antd';
+import { Row, Col, Card } from 'antd';
 
 class Recharts extends React.Component {
 
@@ -96,62 +96,69 @@ class Recharts extends React.Component {
       <div>
         <Row>
           <Col span={12} style={{marginTop: '30px'}}>
-            <LineChart
-              width={500}
-              height={300}
-              data={this.SimpleLineChartData}
-              margin={{
-                top: 5, right: 30, left: 20, bottom: 5,
-            }}
-            >
-            <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="name" />
-              <YAxis />
-              <Tooltip />
-              <Legend />
-              <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }} />
-              <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
-            </LineChart>
+            <Card title='折线图'>
+              <LineChart
+                width={500}
+                height={300}
+                data={this.SimpleLineChartData}
+                margin={{
+                  top: 5, right: 30, left: 20, bottom: 5,
+              }}
+              >
+              <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="name" />
+                <YAxis />
+                <Tooltip />
+                <Legend />
+                <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }} />
+                <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+              </LineChart>
+            </Card>
           </Col>
           <Col span={12} style={{marginTop: '30px'}}>
-            <AreaChart
-              width={500}
-              height={300}
-              data={this.SimpleLineChartData}
-              margin={{
-                top: 5, right: 30, left: 20, bottom: 0,
-              }}
-            >
-            <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="name" />
-              <YAxis />
-              <Tooltip />
-              <Area type="monotone" dataKey="uv" stackId="1" stroke="#8884d8" fill="#8884d8" />
-              <Area type="monotone" dataKey="pv" stackId="1" stroke="#82ca9d" fill="#82ca9d" />
-              <Area type="monotone" dataKey="amt" stackId="1" stroke="#ffc658" fill="#ffc658" />
-            </AreaChart>
+            <Card title='热力图' style={{marginLeft: '10px'}}>
+              <AreaChart
+                width={500}
+                height={300}
+                data={this.SimpleLineChartData}
+                margin={{
+                  top: 5, right: 30, left: 20, bottom: 0,
+                }}
+              >
+              <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="name" />
+                <YAxis />
+                <Tooltip />
+                <Area type="monotone" dataKey="uv" stackId="1" stroke="#8884d8" fill="#8884d8" />
+                <Area type="monotone" dataKey="pv" stackId="1" stroke="#82ca9d" fill="#82ca9d" />
+                <Area type="monotone" dataKey="amt" stackId="1" stroke="#ffc658" fill="#ffc658" />
+              </AreaChart>
+            </Card>
           </Col>
         </Row>
         <Row style={{marginTop: '50px'}}>
           <Col span={12} >
-            <BarChart
-              width={500}
-              height={350}
-              data={this.SimpleLineChartData}
-              margin={{
-                top: 5, right: 30, left: 20, bottom: 5,
-              }}
-              >
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="name" />
-              <YAxis />
-              <Tooltip />
-              <Legend />
-              <Bar dataKey="pv" fill="#8884d8" />
-              <Bar dataKey="uv" fill="#82ca9d" />
-            </BarChart>
+            <Card title='柱状图'>
+              <BarChart
+                width={500}
+                height={350}
+                data={this.SimpleLineChartData}
+                margin={{
+                  top: 5, right: 30, left: 20, bottom: 5,
+                }}
+                >
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="name" />
+                <YAxis />
+                <Tooltip />
+                <Legend />
+                <Bar dataKey="pv" fill="#8884d8" />
+                <Bar dataKey="uv" fill="#82ca9d" />
+              </BarChart>
+            </Card>
           </Col>
           <Col span={12}>
+            <Card title='饼图' style={{marginLeft: '10px'}}>
             <PieChart width={400} height={400}>
               <Pie
                 activeIndex={this.state.activeIndex}
@@ -166,16 +173,19 @@ class Recharts extends React.Component {
                 onMouseEnter={this.onPieEnter}
               />
             </PieChart>
+            </Card>
           </Col>
         </Row>
         <Row style={{marginTop: '30px'}}>
           <Col span={12}>
+            <Card title='这叫啥'>
             <RadarChart cx={300} cy={250} outerRadius={150} width={500} height={500} data={this.RadarChartData}>
               <PolarGrid />
               <PolarAngleAxis dataKey="subject" />
               <PolarRadiusAxis />
               <Radar name="Mike" dataKey="A" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
             </RadarChart>
+            </Card>
           </Col>
         </Row>
       </div>
