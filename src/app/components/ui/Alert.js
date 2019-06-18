@@ -17,7 +17,7 @@ class Alerts extends React.Component {
       <div>
         <BreadcrumbCustom first='UI' second='警告提示'/>
         <Row style={{marginTop: '30px'}}>
-          <Col span={10}>
+          <Col span={12}>
             <Card title='基本用法'>
               <Alert
                 message='成功'
@@ -40,8 +40,8 @@ class Alerts extends React.Component {
               />
             </Card>
           </Col>
-          <Col span={10} style={{marginLeft: '30px'}}>
-            <Card title='可关闭警告⚠️提示'>
+          <Col span={12}>
+            <Card title='可关闭警告⚠️提示' style={{marginLeft: '10px'}}>
               <Alert
                 message="我是警告文本我是警告文本"
                 type="warning"
@@ -60,7 +60,7 @@ class Alerts extends React.Component {
           </Col>
         </Row>
         <Row style={{marginTop: '30px'}}>
-          <Col span={10}>
+          <Col span={12}>
             <Card title='带有icon图标'>
               <Alert
                 message='成功'
@@ -87,8 +87,8 @@ class Alerts extends React.Component {
               />
             </Card>
           </Col>
-          <Col span={10} style={{marginLeft: '30px'}}>
-            <Card title='顶部公告'>
+          <Col span={12}>
+            <Card title='顶部公告' style={{marginLeft: '10px'}}>
               <Alert
                 type='success'
                 message='成功'
