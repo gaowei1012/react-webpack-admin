@@ -12,7 +12,7 @@ class Buttons extends React.Component {
       <div>
         <BreadcrumbCustom first='UI' second='按钮' />
         <Row>
-          <Col span={10} >
+          <Col span={12} >
             <Card title="基础用法12" size="small" style={{marginTop: '30px'}}>
               <Button type="danger" title='danger'>danger</Button>
               <Button type="dashed" title='dashed'>dashed</Button>
@@ -20,7 +20,7 @@ class Buttons extends React.Component {
               <Button type="primary" title='primary'>primary</Button>
             </Card>
           </Col>
-          <Col span={10} >
+          <Col span={12} >
             <Card title='图片按钮' size='small' style={{marginLeft: '10px', marginTop: '30px'}} >
               <Button type="primary" shape="circle" icon="search" />
               <Button type="primary" icon="search">
@@ -34,13 +34,13 @@ class Buttons extends React.Component {
           </Col>
         </Row>
         <Row>
-          <Col span={10}>
+          <Col span={12}>
             <Card title='加载中状态' style={{marginTop: '30px'}}>
               <Button type='primary' loading>loading</Button>
               <Button type='primary' shape='circle' loading></Button>
             </Card>
           </Col>
-          <Col span={10} >
+          <Col span={12} >
             <Card title='按钮组合' style={{marginTop: '30px', marginLeft: '10px'}}>
               <ButtonGroup>
                 <Button type='primary' >
