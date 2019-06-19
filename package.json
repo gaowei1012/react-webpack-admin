@@ -9,7 +9,7 @@
     "build": "webpack --progress --colors --config build/webpack.prod.conf.js",
     "lint": "eslint --ext .js --ext .jsx src/",
     "lint-fix": "eslint --ext .js --ext .jsx src/",
-    "dev": "npm run dev-cli"
+    "dev": "npm run dev-cli && npm run lint"
   },
   "keywords": [],
   "author": "",

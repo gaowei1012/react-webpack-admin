@@ -35,9 +35,11 @@ module.exports = merge(baseWebpackConfig, {
   optimization: {
     nodeEnv: 'development',
     splitChunks: {
-      chunks: 'initial',
-      minSize: 0,
+      chunks: 'async',
+      minSize: 3000,
       minChunks: 1,
+      maxAsyncRequests: 5,
+      maxInitialRequests: 3,
       cacheGroups: {
         commons: {
           chunks: 'initial',
