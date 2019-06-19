@@ -6,6 +6,7 @@ const path = require('path');
 const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const OptimizeCssAsstesPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = merge(baseWebpackConfig, {
   // 模式
@@ -23,6 +24,14 @@ module.exports = merge(baseWebpackConfig, {
       root: path.resolve(__dirname, '../'),
     }),
     new webpack.HashedModuleIdsPlugin(),
+    new OptimizeCssAsstesPlugin({ // 处理打包css问题
+      cssProcessor: cssnano,
+      cssProcessorOptions: {
+        discardComments: {
+          removeAll: true
+        }
+      }
+    })
   ],
   // 代码分离相关
   optimization: {

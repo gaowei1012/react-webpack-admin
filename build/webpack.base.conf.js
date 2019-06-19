@@ -1,17 +1,20 @@
 'use strict'
 const path = require('path');
-const webpack = require('webpack');
+// const webpack = require('webpack');
 // const ExtractTextPlugin = require('extract-text-webpack-plugin');
-// const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const os = require('os')
 const HappyPack = require('happypack')
 const HappyThreadPool = HappyPack.ThreadPool({size: os.cpus().length})
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+// resolve func
+const resolve = dir => path.join(__dirname, '..', dir);
+
 module.exports = {
   // 入口起点
   entry: {
-    app: './src/index.js',
+    app: resolve('./src/index.js'),
+    // app: './src/index.js',
   },
   // 输出
   output: {
@@ -40,7 +43,8 @@ module.exports = {
           loader: 'eslint-loader',
           options: { fix: true }
         }],
-        include: path.resolve(__dirname, '../src/**/*.js'),
+        include: resolve('../src/**/*.js')
+        // path.resolve(__dirname, '../src/**/*.js'),
       },
       {// css|less
         test: /\.css$/,
