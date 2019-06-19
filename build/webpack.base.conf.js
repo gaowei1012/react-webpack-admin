@@ -6,6 +6,7 @@ const os = require('os')
 const HappyPack = require('happypack')
 const HappyThreadPool = HappyPack.ThreadPool({size: os.cpus().length})
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin');
 
 // resolve func
 const resolve = dir => path.join(__dirname, '..', dir);
@@ -18,7 +19,7 @@ module.exports = {
   },
   // 输出
   output: {
-    path: path.resolve(__dirname, '../dist'),
+    path: resolve('../dist'),
     filename: "[name].js",
   },
   // 解析
@@ -84,13 +85,13 @@ module.exports = {
       template: 'index.html',
       inject: 'body'
     }),
-    // minix extract css
-    // new MiniCssExtractPlugin({
-    //   // Options similar to the same options in webpackOptions.output
-    //   // both options are optional
-    //   filename: '[name].css',
-    //   chunkFilename: '[id].css'
-    // }),
+    new AddAssetHtmlPlugin({
+      publicPath: path.relative(__dirname, '..', './src/assets/all'),
+      outputPath: 'dll',
+      filepath: resolve('../src/assets/dll/*.js'),
+      includeRelatedFiles: false,
+      typeOfAsset: 'js'
+    }),
     new HappyPack({
       id: 'happyBabelJs',
       loaders: [
