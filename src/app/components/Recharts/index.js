@@ -159,7 +159,7 @@ class Recharts extends React.Component {
           </Col>
           <Col span={12}>
             <Card title='饼图' style={{marginLeft: '10px'}}>
-            <PieChart width={400} height={400}>
+            <PieChart width={400} height={350}>
               <Pie
                 activeIndex={this.state.activeIndex}
                 activeShape={renderActiveShape}
