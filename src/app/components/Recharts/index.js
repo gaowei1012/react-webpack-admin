@@ -40,6 +40,7 @@ class Recharts extends React.Component {
     { name: 'Group D', value: 200 },
   ];
 
+  
   RadarChartData = [
     {
       subject: 'Math', A: 120, B: 110, fullMark: 150,

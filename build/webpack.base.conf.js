@@ -24,12 +24,16 @@ module.exports = {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        exclude: /(node_modules|bower_components)/,// 屏蔽不需要处理的文件（文件夹）（可选）
-        loader: 'babel-loader',
-        // query: { // 编译jsx语法
-        //   presets: ['es2015','react']
-        // }  
+        loader: 'babel-loader?cacheDirectory', // 使用缓存的方式优化加载速度
+        include: path.resolve(__dirname, '../src'),
+        exclude: /(node_modules|bower_components)/
       },
+      // {
+      //   test: /\.(js|jsx)$/,
+      //   exclude: /(node_modules|bower_components)/,// 屏蔽不需要处理的文件（文件夹）（可选）
+      //   loader: 'babel-loader',
+      //   include: path.resolve(__dirname, '../src')
+      // },
       {// eslint
         test: /\.js[x]?$/,
         exclude: /(node_modules|bower_components)/,
