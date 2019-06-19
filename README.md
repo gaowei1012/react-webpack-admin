@@ -41,4 +41,7 @@ https://github.com/gmw-zjw/my_webpack/tree/master/05webpack-react
 ## 国际化
   多语言支持
 
+## 主题色
+  根据实际需求改变主题色
+
 
