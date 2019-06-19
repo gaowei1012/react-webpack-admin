@@ -19,7 +19,7 @@ module.exports = merge(baseWebpackConfig, {
     hot: true,// 模块热更新，取决于HotModuleReplacementPlugin
     host: '127.0.0.1',// 设置默认监听域名，如果省略，默认为“localhost”
     port: 8703, // 设置默认监听端口，如果省略，默认为“8080”
-    open: true, // 自动打开浏览器
+    open: false, // 自动打开浏览器
   },
   // 插件
   plugins: [
