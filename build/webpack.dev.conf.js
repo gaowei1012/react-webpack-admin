@@ -3,7 +3,7 @@ const merge = require('webpack-merge');
 const baseWebpackConfig = require('./webpack.base.conf');
 const path = require('path')
 const webpack = require('webpack');
-const DllPath = path.resolve(__dirname, '../src/assets/all/react-a244f6f39d15b4533bde.dll.js');
+// const DllPath = path.resolve(__dirname, '../src/assets/all/react-a244f6f39d15b4533bde.dll.js');
 
 module.exports = merge(baseWebpackConfig, {
   // 模式
@@ -26,10 +26,10 @@ module.exports = merge(baseWebpackConfig, {
     // 热更新相关
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.DllReferencePlugin({ // 打包优化 提高打包速度
-      // content: DllPath,
-      manifest: require('../react.dll.manifest.json'),
-    })
+    // new webpack.DllReferencePlugin({ // 打包优化 提高打包速度
+    //   // content: DllPath,
+    //   manifest: require('../react.dll.manifest.json'),
+    // })
   ],
   optimization: {
     nodeEnv: 'development',
