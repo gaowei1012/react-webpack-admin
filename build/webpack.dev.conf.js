@@ -2,7 +2,7 @@
 const merge = require('webpack-merge');
 const baseWebpackConfig = require('./webpack.base.conf');
 
-const path = require('path');
+// const path = require('path');
 const webpack = require('webpack');
 
 module.exports = merge(baseWebpackConfig, {
@@ -25,9 +25,36 @@ module.exports = merge(baseWebpackConfig, {
   plugins: [
     // 热更新相关
     new webpack.NamedModulesPlugin(),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+      }
+    })
   ],
   optimization: {
     nodeEnv: 'development',
+    splitChunks: {
+      chunks: 'initial',
+      minSize: 0,
+      minChunks: 1,
+      cacheGroups: {
+        commons: {
+          chunks: 'initial',
+          minChunks: 2,
+          maxInitialRequests: 5,
+          minSize: 0
+        },
+        vendor: {
+          test: /node_modules/,
+          chunks: 'initial',
+          name: 'vendor',
+          priority: 10, // 优先
+          enforce: true,
+          reuseExistingChunk: true
+        }
+      }
+    },
+    runtimeChunk: true, // webpack 运行时会打包runtime.js
   }
 });

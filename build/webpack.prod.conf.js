@@ -19,7 +19,7 @@ module.exports = merge(baseWebpackConfig, {
   },
   // 插件
   plugins: [
-    new CleanWebpackPlugin(['dist', 'build'], {
+    new CleanWebpackPlugin(['dist'], {
       root: path.resolve(__dirname, '../'),
     }),
     new webpack.HashedModuleIdsPlugin(),
