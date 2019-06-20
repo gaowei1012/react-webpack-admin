@@ -6,7 +6,7 @@ const os = require('os')
 const HappyPack = require('happypack')
 const HappyThreadPool = HappyPack.ThreadPool({size: os.cpus().length})
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin');
+// const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin');
 
 // resolve func
 const resolve = dir => path.join(__dirname, '..', dir);
@@ -85,13 +85,13 @@ module.exports = {
       template: 'index.html',
       inject: 'body'
     }),
-    new AddAssetHtmlPlugin({
-      publicPath: path.relative(__dirname, '..', './src/assets/all'),
-      outputPath: 'dll',
-      filepath: resolve('../src/assets/dll/*.js'),
-      includeRelatedFiles: false,
-      typeOfAsset: 'js'
-    }),
+    // new AddAssetHtmlPlugin({
+    //   publicPath: path.relative(__dirname, '..', './src/assets/all'),
+    //   outputPath: 'dll',
+    //   filepath: resolve('../src/assets/dll/*.js'),
+    //   includeRelatedFiles: false,
+    //   typeOfAsset: 'js'
+    // }),
     new HappyPack({
       id: 'happyBabelJs',
       loaders: [
