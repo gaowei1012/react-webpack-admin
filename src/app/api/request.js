@@ -36,9 +36,9 @@ axios.interceptors.request.use(
 let base = 'http://localhost:3030/';
 
 /**
- * 
+ *
  * @param {String} url 请求路径
- * @param {Object} parmas?<可选> 请求参数 
+ * @param {Object} parmas?<可选> 请求参数
  */
 export const requestHome = (url, parmas = {}) => {
   axios({
