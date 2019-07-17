@@ -1,9 +1,13 @@
 import React from 'react';
+import BreadcrumbCustom from '../../BreadcrumbCustom'
 
 class ExampleAnimations extends React.Component {
   render() {
     return(
-      <div>ExampleAnimations</div>
+      <div>
+        <BreadcrumbCustom first='动画' second='复杂动画' />
+        ExampleAnimations
+      </div>
     )
   }
 }
