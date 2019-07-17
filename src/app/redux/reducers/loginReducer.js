@@ -1,18 +1,37 @@
-import * as ActionLogin from './../constans/actionEvent';
 
-// 定义初始化state
 const initState = {
-  toPath: ''
-};
+  userinfo: null,
+  meuns: '',
+  roles: '',
+}
 
-// login redirct path
-const loginRedirctPath = (state = initState, action) => {
-  if (action.type === ActionLogin.LOGIN_REDIRECT_EVENT) {
-    return Object.assign({}, state, {
-      toPath: action.toPath
-    });
+const onLogout = (state, {payload}) => {
+  return Object.assign({}, state, {
+    userinfo: null,
+    meuns: '',
+    roles: '',
+  })
+}
+
+const setUserInfo = (state, { payload }) => {
+  return Object.assign({}, state, {
+    userinfo: payload.userinfo,
+    meuns: payload.meuns,
+    roles: payload.roles
+  })
+}
+
+
+const userReducer = (state = initState, action) => {
+  switch(action.type) {
+    case 'App.onLogout':
+      return onLogout(state, action)
+    case 'App.setUserInfo':
+      return setUserInfo(state, action)
+    default:
+      return state;
   }
-  return state;
-};
+}
 
-export default loginRedirctPath;
+
+export default userReducer;
