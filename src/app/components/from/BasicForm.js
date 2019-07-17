@@ -1,5 +1,6 @@
 import React from 'react';
 import { Form, Button, Checkbox, Card, Row, Input } from 'antd';
+import BreadcrumbCustom from '../BreadcrumbCustom';
 
 class BasicForm extends React.Component {
   constructor() {
@@ -7,7 +8,10 @@ class BasicForm extends React.Component {
   }
 
   render() {
-    return <div>base form</div>
+    return <div>
+      <BreadcrumbCustom first='动画' second='基础动画' />
+      base form
+    </div>
   }
 }
 

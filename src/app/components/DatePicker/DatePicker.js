@@ -1,6 +1,7 @@
 import React from 'react';
 import { DatePicker, Row, Col, Card } from 'antd';
 import moment from 'moment';
+import BreadcrumbCustom from '../BreadcrumbCustom';
 
 const { RangePicker, MonthPicker, WeekPicker } = DatePicker;
 
@@ -13,6 +14,7 @@ class BasicDatePircker extends React.Component {
   render() {
     return (
       <div>
+        <BreadcrumbCustom first='echart' second='基础图表' />
         <Row style={{ marginTop: '20px' }}>
           <Col span={12}>
             <Card title="基础用法">

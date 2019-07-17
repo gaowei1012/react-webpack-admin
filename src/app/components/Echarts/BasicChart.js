@@ -6,6 +6,7 @@ import 'echarts/lib/component/tooltip';
 import 'echarts/lib/component/title';
 
 
+
 class BasicChart extends React.Component {
 
   componentDidMount() {
@@ -27,7 +28,9 @@ class BasicChart extends React.Component {
 
   render() {
     return(
-      <div id='echarts' style={{width: '450px', height: '300px', textAlign: 'center'}}></div>
+      <div>
+        <div id='echarts' style={{width: '450px', height: '300px', textAlign: 'center'}}></div>
+      </div>
     )
   }
 }
