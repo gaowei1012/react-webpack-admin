@@ -3,6 +3,7 @@ import { Table, Tag, Divider, Card, Row } from 'antd';
 import BasicCheckboxTable from './BasicCheckTable';
 import BasicZhanTable from './BasicZhanTable';
 import BasicFixedTable from './BasicFixedTable';
+import BreadcrumbCustom from './../../BreadcrumbCustom';
 
 class BasicTable extends React.Component {
 
@@ -92,6 +93,7 @@ class BasicTable extends React.Component {
 
     return(
       <div style={{margin: '10px 10px 10px 10px'}}>
+        <BreadcrumbCustom first='表格' second='基础表格' />
         {/* basic table */}
         <Row>
           <Card title={basicTitle}>
