@@ -6,22 +6,33 @@ import HeaderCustom from './components/HeaderCustom';
 import { Layout } from 'antd';
 import { ThemePicker } from './components/widget';
 import { connectAlita } from 'redux-alita';
+import { postRequest } from './api/request'
 
 const { Content, Footer } = Layout;
 
 class App extends Component {
 
-    state = {
-        collapsed: false,
-        title: ''
-    };
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            collapsed: false,
+            title: ''
+       }
+    }
+
+    loadData = () => {
+        //请求后端，拿到token，判断是否登录
+        
+    }
+
     componentWillMount() {
         const { setAlitaState } = this.props;
         const user = JSON.parse(localStorage.getItem('user'));
         user && setAlitaState({ stateName: 'auth', data: user });
         this.getClientWidth();
         window.onresize = () => {
-            console.log('屏幕变化了');
+            ///console.log('屏幕变化了');
             this.getClientWidth();
         }
     }

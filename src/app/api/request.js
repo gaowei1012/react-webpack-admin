@@ -73,6 +73,7 @@ export const postRequest = (url, parmas) => {
     })
       .then(res => {
         resolve(res.data);
+        console.log('res--->' + res)
       })
       .catch(err => {
         reject(err);
