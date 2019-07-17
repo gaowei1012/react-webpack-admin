@@ -3,10 +3,10 @@ import Routes from './routes';
 import DocumentTitle from 'react-document-title';
 import SiderCustom from './components/SiderCustom';
 import HeaderCustom from './components/HeaderCustom';
-import { Layout } from 'antd';
 import { ThemePicker } from './components/widget';
 import { connectAlita } from 'redux-alita';
-import { postRequest } from './api/request'
+import { Layout } from 'antd';
+// import { postRequest } from './api/request'
 
 const { Content, Footer } = Layout;
 
@@ -19,11 +19,6 @@ class App extends Component {
             collapsed: false,
             title: ''
        }
-    }
-
-    loadData = () => {
-        //请求后端，拿到token，判断是否登录
-        
     }
 
     componentWillMount() {

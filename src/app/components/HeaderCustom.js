@@ -44,6 +44,7 @@ class HeaderCustom extends Component {
         }
 
     };
+    /// 退出登录
     menuClick = e => {
         console.log(e);
         e.key === 'logout' && this.logout();
@@ -93,7 +94,7 @@ class HeaderCustom extends Component {
                             <Icon type="notification" />
                         </Badge>
                     </Menu.Item>
-                    <SubMenu title={<span className="avatar"><img src='' alt="头像" /><i className="on bottom b-white" /></span>}>
+                    <SubMenu title={<span className="avatar"><img src='https://gaomingwei.xyz/wp-content/uploads/2019/07/WechatIMG3.jpeg' alt="头像" /><i className="on bottom b-white" /></span>}>
                         <MenuItemGroup title="用户中心">
                             <Menu.Item key="setting:1">你好 - {this.props.user.userName}</Menu.Item>
                             <Menu.Item key="setting:2">个人信息</Menu.Item>
