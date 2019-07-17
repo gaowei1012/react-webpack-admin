@@ -17,7 +17,10 @@ class App extends Component {
 
         this.state = {
             collapsed: false,
-            title: ''
+            title: '',
+            user: {
+                userName: '执念'
+            }
        }
     }
 
