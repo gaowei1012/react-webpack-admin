@@ -7,8 +7,8 @@ const router = new Router({
 
 router.get('/', controller.getHome);
 
-router.post('/register', controller.postRegisetr);
+router.post('/user/register', controller.postRegisetr);
 
-router.post('/login', controller.postLogin);
+router.post('/user/login', controller.postLogin);
 
 module.exports = router;

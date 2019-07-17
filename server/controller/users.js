@@ -1,7 +1,6 @@
 const Router = require('koa-router')
 const mongoose = require('mongoose')
 const addToken = require('../utils/auth/token')
-let router = new Router()
 
 exports.getHome = async (ctx, next) => {
   ctx.body = {

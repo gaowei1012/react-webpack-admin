@@ -7,23 +7,20 @@ const { initShema, connect } = require('./db/init')
 const app = new Koa()
 let router = new Router()
 
-let user = require('./router/user')
-let dashboard = require('./router/dashboard')
-
-router.use('/api/user', user.routes())
-router.use('/api', dashboard.routes())
+app.use(require('./router/user').routes())
 
 // 数据库连接操作
 ;(async () => {
   await connect(),
   initShema()
-})()
+})();
+
 
 app.use(cors())
 app.use(bodyParser())
 app.use(router.routes())
 app.use(router.allowedMethods())
 
-app.listen(3030, () => {
-  console.log('server started at port 3030')
+app.listen(3032, () => {
+  console.log('server started at port 3032')
 })
