@@ -34,7 +34,7 @@ class LoginForm extends Component {
   //   postRequest('user/login', data).then(res => {
   //     if (res.code == 1 && res.success == true) {
   //       // 跳转到首页
-
+  //       window.history.push('/');
   //     }
   //   })
   // }
