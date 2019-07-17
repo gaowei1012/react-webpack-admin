@@ -92,7 +92,7 @@ class BasicTable extends React.Component {
     ];
 
     return(
-      <div style={{margin: '10px 10px 10px 10px'}}>
+      <div>
         <BreadcrumbCustom first='表格' second='基础表格' />
         {/* basic table */}
         <Row>

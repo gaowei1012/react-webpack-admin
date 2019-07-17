@@ -14,7 +14,7 @@ class BasicDatePircker extends React.Component {
   render() {
     return (
       <div>
-        <BreadcrumbCustom first='echart' second='基础图表' />
+        <BreadcrumbCustom first='日历' second='datePicker' />
         <Row style={{ marginTop: '20px' }}>
           <Col span={12}>
             <Card title="基础用法">

@@ -1,6 +1,7 @@
 import React from 'react';
 import { LineChart, BarChart, Line,XAxis, YAxis, CartesianGrid, Tooltip, Legend, AreaChart, Area, Bar, PieChart, Pie, Sector,  Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, } from 'recharts';
 import { Row, Col, Card } from 'antd';
+import BreadcrumbCustom from '../BreadcrumbCustom';
 
 class Recharts extends React.Component {
 
@@ -95,6 +96,7 @@ class Recharts extends React.Component {
   render() {
     return(
       <div>
+      <BreadcrumbCustom first='recharts' second='recharts' />
         <Row>
           <Col span={12} style={{marginTop: '30px'}}>
             <Card title='折线图'>
