@@ -27,6 +27,7 @@ import BasicTable from './Tabs/BasicTable/BasicTable';
 import AdvancedTable from './Tabs/HotTbale/AdvancedTable';
 import AsynchronousTable from './Tabs/AsyncTable/AsynchronousTable';
 import BasicForm from './from/BasicForm';
+import LifeCycle from './ui/LifeCycle'; /// test
 
 
 export default {
@@ -34,5 +35,5 @@ export default {
   EMap, Icons, Spins, Messages, Banner, Notifications, MyTabs, Modals, 
   Alerts, Drags, Wysiwygs, BasicAnimations, ExampleAnimations, Echarts, Recharts,
   BasicAuth, BasicTable, AdvancedTable, AsynchronousTable, BasicDatePircker, EmojiMart,
-  BasicForm
+  BasicForm, LifeCycle,
 };

@@ -17,7 +17,8 @@ export default {
             //   { key: '/app/ui/gallery', title: '画廊', component: 'Gallery'},
               { key: '/app/ui/map', title: '地图', component: 'EMap'},
               { key: '/app/ui/message', title: '全局通知', component: 'Messages'},
-              { key: '/app/ui/alert', title: '警告提示', component: 'Alerts' }
+              { key: '/app/ui/alert', title: '警告提示', component: 'Alerts' },
+              { key: '/app/ui/test', title: '生命周期', component: 'LifeCycle' }
           ],
       },
       {
