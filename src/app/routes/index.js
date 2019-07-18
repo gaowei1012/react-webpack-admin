@@ -2,7 +2,7 @@ import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import DocumentTitle from 'react-document-title';
 import AllComponents from '../components';
-import routeConfig from '../common/route.config';
+import routeConfig from '../commons/route.config';
 import queryString from 'query-string';
 
 // export default MyRouter;

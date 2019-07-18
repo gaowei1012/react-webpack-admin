@@ -44,4 +44,8 @@ https://github.com/gmw-zjw/my_webpack/tree/master/05webpack-react
 ## 主题色
   根据实际需求改变主题色
 
+2019-7-18 
+
+  - 采用mock数据模拟真是数
+  - 用户权限模块
 
