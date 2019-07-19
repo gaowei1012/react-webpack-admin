@@ -1,7 +1,14 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import { createApp } from './app'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Page from './Page';
+import { AlitaProvider } from 'redux-alita';
+import 'antd/dist/antd.css';
+import './style/lib/animate.css';
+import './style/antd/index.less';
+import './style/index.less';
 
-const appliction = createApp()
-
-ReactDOM.render(appliction, document.querySelector('#root'));
+ReactDOM.render(
+  <AlitaProvider>
+    <Page />
+  </AlitaProvider>
+  , document.querySelector('#root'));
