@@ -2,6 +2,12 @@
 
  - 使用redux作为数据管理
 
+## 项目预览
+
+![home](https://gaomingwei.xyz/wp-content/uploads/2019/07/WX20190723-151641.png)
+
+![echart](https://gaomingwei.xyz/wp-content/uploads/2019/07/WX20190723-145607.png)
+
 ## 安装 
 ```
 https://github.com/gmw-zjw/my_webpack/tree/master/05webpack-react
