@@ -9,12 +9,13 @@
 ![echart](https://gaomingwei.xyz/wp-content/uploads/2019/07/WX20190723-145607.png)
 
 ## 安装 
-```
+
+```shell
 https://github.com/gmw-zjw/my_webpack/tree/master/05webpack-react
 ```
 ## 安装依赖&启动
 
-```
+```shell
     npm i & npm run dev
 ```
 
