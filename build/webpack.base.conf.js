@@ -1,3 +1,10 @@
+/*
+ * @Description: webpack base config 
+ * @Author: 执念
+ * @Date: 2019-09-02 21:19:33
+ * @LastEditTime: 2019-09-02 21:36:46
+ * @LastEditors: Please set LastEditors
+ */
 'use strict'
 const path = require('path');
 // const webpack = require('webpack');
@@ -9,12 +16,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 // const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin');
 
 // resolve func
-const resolve = dir => path.join(__dirname, '..', dir);
+const resolve = dir => path.join(__dirname, dir);
 
 module.exports = {
   // 入口起点
   entry: {
-    app: resolve('./src/index.js'),
+    app: resolve('../src/index.js'),
     // app: './src/index.js',
   },
   // 输出
@@ -51,7 +58,7 @@ module.exports = {
         test: /\.css$/,
         // use: 'happypack/loader?id=happyBabelCss',
         use: ['style-loader', 'css-loader'],
-        // include: path.resolve(__dirname, '../src'),
+        //include: resolve('../src'),
       },
       {
         test: /\.less$/,
@@ -82,7 +89,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: 'index.html',
+      template: resolve('../index.html'),
       inject: 'body'
     }),
     // new AddAssetHtmlPlugin({

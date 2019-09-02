@@ -1,3 +1,10 @@
+/*
+ * @Description: webpack prod config
+ * @Author: 执念
+ * @Date: 2019-09-02 21:19:33
+ * @LastEditTime: 2019-09-02 21:39:47
+ * @LastEditors: Please set LastEditors
+ */
 'use strict'
 const merge = require('webpack-merge');
 const baseWebpackConfig = require('./webpack.base.conf');
@@ -7,6 +14,8 @@ const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
+const resolve = dir => path.resolve(__dirname, dir);
+
 module.exports = merge(baseWebpackConfig, {
   // 模式
   mode: "production",
@@ -14,13 +23,14 @@ module.exports = merge(baseWebpackConfig, {
   devtool: '#source-map',
   // 输出
   output: {
-    path: path.resolve(__dirname, '../dist'),
-    filename: "js/[name].[chunkhash].js",
+    path: resolve('../dist/js'),
+    //filename: "js/[name].[chunkhash].js",
+    filename: '[name].[chunkhash].js'
   },
   // 插件
   plugins: [
     new CleanWebpackPlugin(['dist',], {
-      root: path.resolve(__dirname, '../'),
+      root: resolve('../'),
     }),
     new webpack.HashedModuleIdsPlugin(),
   ],

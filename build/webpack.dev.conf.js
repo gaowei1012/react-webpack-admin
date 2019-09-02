@@ -1,9 +1,18 @@
+/*
+ * @Description: webpack dev config
+ * @Author: 执念
+ * @Date: 2019-09-02 21:19:33
+ * @LastEditTime: 2019-09-02 21:28:56
+ * @LastEditors: Please set LastEditors
+ */
 'use strict'
 const merge = require('webpack-merge');
 const baseWebpackConfig = require('./webpack.base.conf');
 const path = require('path')
 const webpack = require('webpack');
+
 // const DllPath = path.resolve(__dirname, '../src/assets/all/react-a244f6f39d15b4533bde.dll.js');
+const resolve = dir => path.resolve(__dirname, dir);
 
 module.exports = merge(baseWebpackConfig, {
   // 模式
