@@ -1,4 +1,6 @@
 
+import { APP_ON_LOGOUT, APP_SET_USERINFO } from '../constans/actionEvent'
+
 const initState = {
   userinfo: null,
   meuns: '',
@@ -24,9 +26,9 @@ const setUserInfo = (state, { payload }) => {
 
 const userReducer = (state = initState, action) => {
   switch(action.type) {
-    case 'App.onLogout':
+    case APP_ON_LOGOUT:
       return onLogout(state, action)
-    case 'App.setUserInfo':
+    case APP_SET_USERINFO:
       return setUserInfo(state, action)
     default:
       return state;

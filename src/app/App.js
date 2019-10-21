@@ -20,6 +20,11 @@ const { Content, Footer } = Layout;
 
 class App extends Component {
 
+    static propTypes = {
+        userName: PropTypes.string.isRequired,
+        collapsed: PropTypes.bool.isRequired
+    }
+
     constructor(props) {
         super(props)
 
