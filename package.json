@@ -1,7 +1,7 @@
 {
-  "name": "05webpack-react",
-  "version": "1.0.0",
-  "description": "",
+  "name": "react-admin",
+  "version": "1.0.1",
+  "description": "This is react admin",
   "main": "index.js",
   "scripts": {
     "dev-cli": "webpack-dev-server --hot --inline --progress --colors --config build/webpack.dev.conf.js",
