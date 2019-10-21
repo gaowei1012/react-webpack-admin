@@ -10,5 +10,6 @@ import './style/index.less';
 ReactDOM.render(
   <AlitaProvider>
     <Page />
-  </AlitaProvider>
-  , document.querySelector('#root'));
+  </AlitaProvider>,
+  document.querySelector('#root')
+);
