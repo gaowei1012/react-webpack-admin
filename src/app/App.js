@@ -6,17 +6,11 @@ import SiderCustom from './components/SiderCustom';
 import HeaderCustom from './components/HeaderCustom';
 import { ThemePicker } from './components/widget';
 import { connectAlita } from 'redux-alita';
-import { connect } from 'react-redux';
 import { Layout } from 'antd';
 
 // import { postRequest } from './api/request'
 
 const { Content, Footer } = Layout;
-
-// const propTypes = {
-//     // TODO
-//     userNmae: PropTypes.object.isRequired
-// }
 
 class App extends Component {
 
@@ -82,13 +76,5 @@ class App extends Component {
         );
     }
 }
-
-// const mapStateToProps = state => ({
-//     userNmae: state.app.userName
-// })
-
-// App.proptType = propTypes
-
-// export default connect(mapStateToProps)(App)
 
 export default connectAlita(['auth', 'responsive'])(App);
