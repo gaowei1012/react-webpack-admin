@@ -42,8 +42,6 @@ https://github.com/gmw-zjw/my_webpack/tree/master/05webpack-react
 ## 集成antd作为最为项目的UI库，方便布局
 使用antd作为该项目的UI库
 
-## 集成服务端渲染为一体化
-  继承服务端渲染，虽然本项目没有用到这一点，但是作为整合资源 加入服务端渲染，需要使用的同学可以看server下面的代码
 
 ## 国际化
   多语言支持
