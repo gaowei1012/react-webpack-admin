@@ -1,11 +1,20 @@
-// // redux store
-// import { createStore, combineReducers } from 'redux';
-// import loginReducer from './reducers/loginReducer';
+import { createStore, applyMiddleware } from 'redux'
+import logger from 'redux-logger'
+import thunk from 'redux-thunk'
+import rootReducers from './reducers' 
 
-// const reducers = combineReducers({
-//   loginReducer: loginReducer
-// });
+const configStore = preloadState => {
+  const store = createStore(
+    rootReducers,
+    preloadState,
+    applyMiddleware(thunk, logger)
+  )
 
-// const store = createStore(reducers);
+  if (module.hot) {
+    module.hot.accept('./reducers', () => {
+      store.preloadState(rootReducers)
+    })
+  }
+}
 
-// export default store;
+export default configStore
