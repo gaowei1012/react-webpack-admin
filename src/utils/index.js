@@ -18,3 +18,24 @@ export const queryString = () => {
   });
   return _queryString;
 };
+
+/**
+ * search parmas function
+ * @param {obj} url url
+ */
+export function param2Obj(url) {
+	const search = url.split('?')[1]
+	if (!search) {
+		return {}
+	}
+
+	return JSON.parse(
+		'{"' +
+      decodeURIComponent(search)
+        .replace(/"/g, '\\"')
+        .replace(/&/g, '","')
+        .replace(/=/g, '":"')
+        .replace(/\+/g, ' ') +
+    '"}'
+	)
+}
