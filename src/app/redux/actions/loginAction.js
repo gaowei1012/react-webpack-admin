@@ -1,5 +1,6 @@
 import { postRequest } from '../../api/request';
 import { message } from 'antd';
+import { APP_ON_LOGOUT } from '../constans/actionEvent'
 
 // 登录
 export const onLogin = (parmas = {}) = async dispatch => {
@@ -15,7 +16,7 @@ export const onLogin = (parmas = {}) = async dispatch => {
 export const onLogout = (parmas = {}) = async dispatch => {
   try {
     dispatch({
-      type: 'App.logout',
+      type: APP_ON_LOGOUT,
       payload: null
     })
     localStorage.removeItem('userInfo')
