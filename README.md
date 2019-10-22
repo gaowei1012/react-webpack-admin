@@ -11,7 +11,7 @@
 ## 安装 
 
 ```shell
-https://github.com/gmw-zjw/my_webpack/tree/master/05webpack-react
+git clone https://github.com/gmw-zjw/my_webpack/tree/master/05webpack-react
 ```
 ## 安装依赖&启动
 
