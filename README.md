@@ -4,9 +4,9 @@
 
 ## 项目预览
 
-![home](https://gaomingwei.xyz/wp-content/uploads/2019/07/WX20190723-151641.png)
+![home](https://img.hacpai.com/file/2019/10/dash-f69424a2.png?imageView2/2/w/1280/format/jpg/interlace/1/q/100)
 
-![echart](https://gaomingwei.xyz/wp-content/uploads/2019/07/WX20190723-145607.png)
+![echart](https://img.hacpai.com/file/2019/10/chart-f537835c.png?imageView2/2/w/1280/format/jpg/interlace/1/q/100)
 
 ## 安装 
 
