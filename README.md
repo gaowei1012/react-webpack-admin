@@ -16,7 +16,7 @@ git clone https://github.com/gmw-zjw/my_webpack/tree/master/05webpack-react
 ## 安装依赖&启动
 
 ```shell
-    npm i & npm run dev
+npm i & npm run dev
 ```
 
 ## 更新 2019-06-03
@@ -34,10 +34,6 @@ git clone https://github.com/gmw-zjw/my_webpack/tree/master/05webpack-react
 
 使用 eslint-plugin-react 来处理react的代码检测，必须加prop-types类型检测
 
-```
-    // package.json
-    "lint": "eslint --ext .js --ext .jsx src/"
-```
 
 ## 集成antd作为最为项目的UI库，方便布局
 使用antd作为该项目的UI库
@@ -53,4 +49,8 @@ git clone https://github.com/gmw-zjw/my_webpack/tree/master/05webpack-react
 
   - 采用mock数据模拟真是数
   - 用户权限模块
+ 
+ 2019-10-22
+  
+  - 修复若干bug 
 
